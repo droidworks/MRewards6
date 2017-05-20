@@ -1,0 +1,64 @@
+Email Newsletters module change log
+
+Version 2.2.1:
+ - Bug Fix: Test Newsletter may not send on some systems
+
+Version 2.2.0:
+ - New: Send test newsletter to Master and Profile admin options added
+ - New: Email notification to sender when sending of Newsletters is complete
+ - New: Email rate limiting to Yahoo and AOL addresses to improve deliverability
+ - New: "Enable Rate Limiting" global config option to enable/disable rate limiting
+ - New: "Send Rate" global config option to set send rate of newsletters
+
+Version 2.1.0:
+ - New: "Module Filters" support to allow modules to apply specific filters to recipients
+ - New: "Custom Filter" support for defining custom User and Profile fields for match recipients
+ - New: "Matching Recipient Count" in compose view to see number of matching recipients
+ - New: "View Recipients" button in compose view to see recipients before sending
+ - Change: module "groups" renamed to "Module Filters" to allow more precise match control
+
+Version 2.0.4:
+ - Bug Fix: Newsletters could be sent to inactive users with active profiles
+
+Version 2.0.3:
+ - Bug Fix: HTML header/footer could be stripped in some instances
+
+Version 2.0.2:
+ - Bug Fix: Changes made while updating template in template editor may not save correctly
+
+Version 2.0.1:
+ - New: Close button added to the Save as New Template modal window
+ - Bug Fix: It was possible to save a new template without a title
+
+Version 2.0.0:
+ - New: Full page template support has been added, along with a new Template Editor
+ - New: Updated to support new Campaign analytics provided by Mail Core
+ - Change: Newsletter stats replaced with link to Campaign overview from Mail Core
+
+Version 1.3.0:
+ - New: "Ignore Unsubscribed" option to send newsletter to all users regardless of notification preferences
+ - Bug Fix: "Save Newsletter" activity indicator may not go away after save
+
+Version 1.2.1:
+ - New: "Newsletter Subscribers" Dashboard Panel
+ - Bug Fix: "Save Newsletter" button may show submit spinner and not actually submit
+
+Version 1.2.0:
+ - New: Updated to work properly with User Notifications and new "NewsLetter" option
+ - Change: "Send Rate" Global setting removed - now defined in Mailer Global Config
+
+Version 1.1.2:
+ - Bug Fix: Unsubscribe success result screen was not returning proper success message
+
+Version 1.1.1:
+ - Bug Fix; Fixed a few typos in the newsletter send and stats screens
+
+Version 1.1.0:
+ - New "Newsletter Stats" tool showing number recipients, opens and percent opened
+ - New "open tracking" support for HTML newsletters
+
+Version 1.0.3:
+ - Adding new Changelog
+
+Version 1.0.0:
+ - Initial Release

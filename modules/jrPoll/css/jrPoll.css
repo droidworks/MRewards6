@@ -1,0 +1,76 @@
+#poll_error {
+    display: none;
+    background-color: #FFCC00 !important;
+    padding: 6px 12px;
+    margin-top: 6px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.poll_countdown {
+    float: left;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px 20px 20px 0;
+}
+
+.poll_option_update {
+    display: inline-block;
+    width: 99%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.poll_status {
+    float: right;
+    position: relative;
+    cursor: pointer;
+}
+
+.poll_open {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 12px;
+    margin: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.poll_pending {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 12px;
+    margin: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.poll_closed {
+    display: inline-block;
+    text-align: center;
+    padding: 8px 12px;
+    margin: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.poll_voted {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.poll_winner {
+    background-color: #CCFF99 !important;
+}
+
+.poll_vote_count {
+    font-weight: bold;
+    font-size: 14px;
+}

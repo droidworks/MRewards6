@@ -1,0 +1,194 @@
+/* jrElastic Profile Page CSS */
+
+/* @title Profile Menu */
+/* @help This is the Profile menu */
+.profile_menu {
+    background-color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* @title Profile Menu Entry */
+/* @help This is the Profile menu entries */
+.profile_menu_entry {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0) linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #000000;
+    margin-top: 6px;
+    margin-right: 3px;
+    padding: 7px 7px 6px 7px;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+/* @title Menu Entry Link */
+/* @help This is the menu entry URL link */
+.profile_menu_entry a {
+    color: #000000;
+}
+
+/* @title Menu Link Hover */
+/* @help This is the menu entry URL link hover effect */
+.profile_menu_entry:hover {
+    background-color: #EEEEEE;
+}
+
+/* @title Menu Entry Active */
+/* @help This is the menu entry active state */
+.profile_menu_entry_active {
+    background-color: #FFCC00;
+    color: #000000;
+}
+
+.profile_menu_entry_active:hover {
+    color: #000000;
+}
+
+/* @title Profile Name Box */
+/* @help This is the box that the Profile Name text is in */
+.profile_name_box {
+    background-image: url("{$jrElastic_img_url}/bckgrd.png");
+    background-color: #333333;
+    vertical-align: middle;
+    text-transform: capitalize;
+    padding: 12px;
+    margin: 12px 12px 6px 12px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 3px #000000;
+}
+
+/* @title Profile Name */
+/* @help This is the Profile Name text */
+.profile_name {
+    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* @title Profile Link */
+/* @help This is the Profile Name URL link */
+.profile_name a {
+    text-decoration: none;
+}
+
+/* @title Profile Link Hover */
+/* @help This is the Profile Name link hover effect */
+.profile_name a:hover {
+    text-decoration: none;
+}
+
+.profile_actions {
+    float: right;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.block_profile_left {
+    padding-right: 3px;
+}
+
+.profile_image {
+    position: relative;
+}
+
+/* @title Profile Image Hover */
+/* @help When Hovering over the Profile Image, the Change Profile Image hover box will appear */
+.profile_hoverimage {
+    background-color: #333333;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 3px;
+    display: none;
+    opacity: 0.8;
+    border-radius: 3px;
+}
+
+.profile_hoverimage a {
+    text-decoration: none;
+}
+
+.profile_hoverimage a:hover {
+    text-decoration: none;
+}
+
+.profile_image:hover .profile_hoverimage {
+    display: block;
+    cursor: pointer;
+}
+
+.stat_entry_box {
+    float: left;
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 3px 9px;
+    margin: 6px 6px 0 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.stat_entry_box a {
+    text-decoration: none;
+}
+
+.stat_entry_box:hover {
+    background-color: #EEEEEE;
+}
+
+.stat_entry_count {
+    font-weight: 500;
+}
+
+.action_item_title {
+    font-weight: 500;
+}
+
+.action_item_shared {
+    background: transparent;
+    padding: 0;
+}
+
+.action_detail {
+    background: #F3F3F3;
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+    margin-top: 6px;
+}
+
+.action_item_holder {
+    box-sizing: border-box;
+    padding: 12px 12px 12px 0;
+}
+
+.action_item_holder_shared {
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+}
+
+.action_item_delete {
+    right: 0;
+    padding: 0;
+}
+
+#quick_action_form .upload_button {
+    margin-left: 4px;
+    margin-bottom: 2px;
+}
+
+#action_submit {
+    margin-left: 4px;
+}
+
+#comment_form_section .form_button {
+    margin-left: 4px;
+}

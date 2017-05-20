@@ -1,0 +1,121 @@
+#wrapper {
+    margin:0 auto;
+}
+
+/* @title Site Content */
+/* @help This is the main Site Content holder */
+#content {
+    max-width:1140px;
+    margin-top:116px;
+    margin-right:auto; /* @ignore */
+    margin-left:auto;  /* @ignore */
+    height:100%; /* @ignore */
+    font-size:12px;
+    padding:15px 6px 6px 6px;
+}
+
+.recommend_box {
+    background-color:#EDEDED;
+    padding:25px;
+    margin:12px;
+    border-style:solid;
+    border-color:#DDDDDD;
+    border-width:1px;
+    font-size:16px;
+    color:#000000;
+    border-radius:5px;
+}
+
+.recommend_box a {
+    color:#EDEDED;
+    text-decoration:none;
+}
+.recommend_box a:hover {
+    color: #FFF;
+    text-decoration:underline;
+}
+.search_box {
+    background-color:#EDEDED;
+    padding:25px;
+    margin:12px;
+    border-style:solid;
+    border-color:#DDDDDD;
+    border-width:1px;
+    font-size:16px;
+    color:#000000;
+    border-radius:5px;
+}
+
+.search_box a {
+    color:#EDEDED;
+    text-decoration:none;
+}
+.search_box a:hover {
+    color: #FFF;
+    text-decoration:underline;
+}
+.signup_box {
+    background-color:#EDEDED;
+    padding:25px;
+    margin:12px;
+    border-style:solid;
+    border-color:#DDDDDD;
+    border-width:1px;
+    font-size:16px;
+    color:#000000;
+    border-radius:5px;
+    width:400px;
+}
+
+.signup_box a {
+    color:#EDEDED;
+    text-decoration:none;
+}
+.signup_box a:hover {
+    color: #FFF;
+    text-decoration:underline;
+}
+.login_box {
+    background-color:#EDEDED;
+    padding:25px;
+    margin:12px;
+    border-style:solid;
+    border-color:#DDDDDD;
+    border-width:1px;
+    font-size:16px;
+    color:#000000;
+    border-radius:5px;
+    width:400px;
+}
+
+.login_box a {
+    color:#EDEDED;
+    text-decoration:none;
+}
+.login_box a:hover {
+    color: #FFF;
+    text-decoration:underline;
+}
+.create_audio_box {
+    background-color: #333333 !important;
+    position: inherit;
+    text-align: left;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    padding: 6px;
+    z-index: 100;
+    overflow: visible;
+    box-shadow: 3px 3px 3px 3px #CCCCCC;
+}
+.create_video_box {
+    background-color: #333333 !important;
+    position: inherit;
+    text-align: left;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    padding: 6px;
+    z-index: 100;
+    overflow: visible;
+    box-shadow: 3px 3px 3px 3px #CCCCCC;
+}
+

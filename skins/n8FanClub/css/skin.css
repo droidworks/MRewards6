@@ -1,0 +1,545 @@
+/* @title Section  */
+/* @help Section separate content. Position must stay relative. Text color is optional. */
+
+section {
+    position: relative;
+    color: #444;
+}
+
+
+/* @title Pad  */
+/* @help Not sure this is used. lol. */
+.pad {
+    padding: 0 2em;
+    position: relative;
+}
+
+.actions > ul {
+    height: 34px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.textArea .loader {
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+}
+
+/* @title Block Search  */
+/* @help appears on module index pages and acp forms. */
+.block_search {
+    right: 0;
+    position: absolute;
+    text-align: right;
+    top: 7px;
+    white-space: nowrap;
+    width: auto;
+}
+
+/* @title Index Title Size  */
+/* @help appears on the index page hovers. */
+span.title {
+    font-size: 16px;
+}
+
+.CodeMirror {
+    background: #0f1418 none repeat scroll 0 0;
+    color: white;
+}
+
+/* @title Shadow  */
+/* @help appears around some images. */
+.shadow {
+    box-shadow: 1px 1px 5px #666;
+}
+
+/* @title H2  */
+/* @help default size */
+h2 {
+    font-size: 18px;
+}
+
+.p5 > h2 {
+    margin: 0;
+}
+
+.p5 h3 {
+    margin: 0 0 5px;
+}
+
+h3 {
+    text-align: left;
+}
+
+/* @title Footer  */
+/* @help appears at the bottom of every page. */
+
+.footer {
+    background: #135 none repeat scroll 0 0;
+    bottom: 0;
+    counter-reset: black;
+    min-height: 180px;
+    position: relative;
+    width: 100%;
+}
+
+.widget-item-widget_gallery .col3 {
+    padding: 1px;
+    width: 24.2%;
+}
+
+.image_stack2 {
+    left: 42px !important;
+}
+
+.image_stack1 {
+    left: 21px !important;
+}
+
+.button_player a.jp-play, .button_player a.jp-pause {
+    display: none;
+}
+
+/* @title Site Builder Titles  */
+/* @help appears on the title of site builder block. */
+.box > span {
+    color: #444;
+    float: none;
+    font-size: 18px;
+    left: 45px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 7px;
+}
+
+.box .block_search .form_text {
+    width: 77%;
+}
+
+.bundle_box {
+    background-color: #333;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+    border: medium none;
+    box-shadow: 1px 0 5px 3px #000;
+}
+
+/* This section is mainly for ISkin documentation. You may wanna delete it */
+.widget-item-widget_html .item li {
+    list-style: inherit;
+}
+
+.widget-item.widget-item-widget_calendar {
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 0 2px #999;
+}
+
+.widget-item.widget-item-widget_tag_cloud {
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 0 2px #999;
+}
+
+.widget-item h4 {
+    margin: 0;
+    padding: 1em 0 0;
+}
+
+.box > .block_search > h3 {
+    display: inline;
+}
+
+
+.social h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 8px;
+    margin: 1em 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.social > li {
+    float: left;
+    list-style: outside none none;
+    width: 20%;
+}
+
+.social li a {
+    background: #666 none repeat scroll 0 0;
+    display: block;
+    height: 50px;
+    margin: auto;
+    width: 50px;
+}
+
+div.social {
+    padding: 2em 0;
+    position: relative;
+}
+
+ul.social {
+    display: block;
+    margin: 10px auto;
+    min-width: 320px;
+    padding: 1em 0;
+    width: 50%;
+}
+
+.social li a.social-facebook {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8FanClub/img/social-facebook.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-twitter {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8FanClub/img/social-twitter.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-google {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8FanClub/img/social-google.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-linkedin {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8FanClub/img/social-linkedin.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-youtube {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8FanClub/img/social-youtube.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-facebook:hover,
+.social li a.social-twitter:hover,
+.social li a.social-linkedin:hover,
+.social li a.social-youtube:hover,
+.social li a.social-google:hover {
+    background-position: 0 -50px;
+}
+
+.social > div {
+    clear: both;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.smallScreen {
+    display: none;
+}
+
+.tablet {
+    display: none;
+}
+
+
+.index h2, .features h2 {
+    font-size: 36px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+
+.middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+
+
+
+.index h3 {
+    text-align: center;
+    margin: 0;
+}
+
+
+.top_stories {
+    margin: auto;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+
+
+.jlogo {
+    position: relative;
+    top: -2px;
+}
+
+.index_item {
+    border-bottom: 1px solid #ddd;
+    padding: 1em 0;
+}
+
+.box_body .box {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.box_body .box_body {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    box-shadow: none;
+}
+
+.box_body .box_body > .wrap {
+    padding: 0;
+}
+
+.box_body .box_body .media {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    box-shadow: none;
+}
+
+.box_body .box_body .media > .wrap {
+    padding: 0;
+}
+
+.box_body .box_body .media .item_media {
+    box-shadow: none;
+}
+
+.box_body .box .head_tab {
+    display: none;
+}
+
+.box .page_nav {
+    padding: 10px 14px 0;
+}
+
+.sb-container-tabs .page_tab_bar_holder {
+    border: medium none;
+}
+
+.sb-widget-block h1 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.sb-container-tabs {
+    position: absolute;
+    right: 5px;
+    top: -22px;
+    z-index: 10;
+}
+
+.widget-item .item:first-child {
+    margin-top: 0;
+}
+
+.widget-item .item:last-child {
+    margin-bottom: 0;
+}
+
+#content > .block {
+    background: #d6d7d9 none repeat scroll 0 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) inset, 0 0 0 rgba(0, 0, 0, 0.3) inset, 0 2px 0 rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+}
+
+
+.item_title {
+    color: black;
+    display: block;
+    font-family: tahoma;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 0 3px;
+    text-transform: capitalize;
+}
+
+.index_item .data > span {
+    display: block;
+    float: left;
+    font-weight: lighter;
+    width: 50%;
+}
+
+
+.index_item .data {
+    color: #888;
+    padding: 1em 5px 0;
+}
+
+.index_item .data > span:last-child {
+    text-align: right;
+}
+
+.blogger {
+    float: left;
+    margin: 0 10px 10px;
+    max-width: 100px;
+}
+
+.index_item span.title {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.stories .col4 > .wrap > .index_item:first-child {
+    margin-top: 0;
+}
+
+.stories {
+    background: white none repeat scroll 0 0;
+    padding: 20px 0;
+    min-height: calc(100vh - 399px);
+    margin: auto;
+    max-width: 1140px;
+}
+
+.stories .col4 > .wrap > h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 10px 2em;
+    text-align: center;
+}
+
+.stories .col4 > .wrap {
+    border-right: 1px solid #e5e5e5;
+    padding: 0 1em;
+}
+
+.stories .row .col4:last-child > .wrap {
+    border: medium none;
+}
+
+.top .banner {
+    min-height: 60px;
+    text-align: center;
+}
+
+.index_search {
+    float: right;
+    padding: 28px 1em;
+}
+.index_search .form_button {
+    display: none;
+}
+.top.home {
+    background: white none repeat scroll 0 0;
+}
+
+#list .index_item:last-child {
+    margin-bottom: 0;
+}
+
+.middle .title {
+    box-sizing: border-box;
+    color: #f0f1e1;
+    display: block;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 1;
+    margin: 0 0 6px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.col6 .col6 .middle .title {
+    font-size: 20px;
+}
+
+.cover {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0.5;
+    transition: opacity 1s ease 0s;
+}
+
+.feature:hover .cover {
+    opacity: 1;
+}
+
+.feature {
+    color: #f0f1e1;
+    position: relative;
+    cursor: pointer;
+}
+
+.stories .col8 > .wrap {
+    border-right: 1px solid #eee;
+    padding: 0 1em;
+}
+
+.index_menu .right > a {
+    padding: 2px 5px 0 0;
+}
+
+.simplemodal-container {
+    background: #fff none repeat scroll 0 0;
+    border: 10px solid #246;
+    border-radius: 4px;
+}
+
+.stories .col4 .index_item {
+    background: #eee none repeat scroll 0 0;
+    margin: 0;
+    padding: 10px;
+}
+
+.index_item > span {
+    color: #666;
+}
+
+.stories .head {
+    background: #246 none repeat scroll 0 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 14px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.create_box a {
+    text-transform: uppercase;
+}
+
+.create_box h3 {
+    color: #999;
+    font-weight: lighter;
+}
+
+.stories .col4 .item_title > a {
+    font-size: 18px;
+}
+
+.index_logo {
+    float: right;
+}
+
+.middle > div.wrap {
+    margin: auto;
+    max-width: 80%;
+    text-align: center;
+    font-family: Georgia,Times,Times New Roman,serif;
+}
+
+.fs {
+    padding: 30px 0 0;
+}
+
+.stories .list_item {
+    border-bottom: 1px solid #eee;
+    box-shadow: none;
+    padding: 0 0 1em;
+}
+
+.stories .col8 .index_item:first-child {
+    padding-top: 0;
+}

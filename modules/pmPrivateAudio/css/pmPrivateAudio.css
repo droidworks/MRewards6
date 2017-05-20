@@ -1,0 +1,79 @@
+/* @title Audio Detail Box */
+/* @help This is the box around the Audio Details that is seen on the Update Audio file form. */
+.pmPrivateAudio_detail {
+    width: 65%;
+    padding: 10px;
+    margin: 0 0 12px 3px;
+    font-size: 14px;
+}
+
+.pmPrivateAudio_detail_left {
+    width: 10%;
+}
+
+/* @title Audio Details */
+/* @help This is the text area that contains the information about the Audio File. */
+.pmPrivateAudio_detail_right {
+    width: 90%;
+    text-align: left;
+}
+
+/* @title Audio Detail Labels */
+/* @help This is the small labels that are shown in the Audio Details box */
+.pmPrivateAudio_title {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+
+.pmPrivateAudio_detail_player {
+    display: table;
+    width: 100%;
+}
+
+.pmPrivateAudio_detail_player_left {
+    display: table-cell;
+    width: 70%;
+    padding: 5px;
+    padding-right: 18px;
+    vertical-align: top;
+}
+
+.pmPrivateAudio_detail_player_right {
+    display: table-cell;
+    width: 30%;
+    padding: 5px;
+    vertical-align: top;
+}
+
+.pmPrivateAudio_list_detail {
+    float: left;
+    margin-left: 18px;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+
+    .pmPrivateAudio_detail_player {
+        display: inline;
+    }
+
+    .pmPrivateAudio_detail_player_left {
+        display: inline;
+        width: 100%;
+    }
+
+    .pmPrivateAudio_detail_player_right {
+        display: inline;
+        width: 100%;
+    }
+
+    .pmPrivateAudio_detail_player_right img {
+        margin-top: 12px;
+        width: 90%;
+    }
+
+    .pmPrivateAudio_list_detail {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}

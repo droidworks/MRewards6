@@ -1,0 +1,83 @@
+/* @title Header */
+/* @help This is the main header section for the site */
+#header {
+    top:0;
+    left:0;
+    right:0;
+    height:76px;
+    width:100%;
+    background-color: #333333;
+    color:#FFFFFF;
+    margin:0;
+    border-bottom: 1px dotted #000;
+    position: fixed;
+    z-index: 90;
+}
+/* @title Header Links */
+/* @help Header text URL */
+#header a {
+    text-transform:capitalize;
+    text-decoration:none;
+    color:#fff;
+}
+
+/* @title Header Link Hover */
+/* @help Header text URL hover */
+#header a:hover {
+    text-decoration:underline;
+    color:#fff;
+}
+
+#header_content {
+    height:100%;
+    max-width:1140px;
+    margin-left:auto;
+    margin-right:auto;
+    text-shadow:2px 2px 4px #000;
+}
+
+#main_logo {
+    float:left;
+    vertical-align:middle;
+    padding:12px;
+    cursor:pointer;
+}
+
+/* @title Main Menu */
+/* @help Main Menu */
+#main_menu {
+    background-color: #333;
+    top:77px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 1px dotted #6f6f6f;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+    position: fixed;
+    z-index: 90;
+}
+.menu_holder {
+    max-width: 1140px;
+    padding:0;
+    margin: 0 auto;
+}
+
+.header_ad {
+    float:right;
+    margin:10px 15px 0 0;
+}
+.mobile_top_ad {
+    display: none;
+}
+
+
+#add_to_cart_success {
+    float:left;
+    position:absolute;
+    margin:0 auto;
+    background-color:#fc0;
+    border:1px solid #999;
+    padding:7px;
+    font-size:14px;
+    border-radius:4px;
+}

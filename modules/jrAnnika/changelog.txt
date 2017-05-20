@@ -1,0 +1,19 @@
+Annika module changelog:
+
+Version 1.1.4:
+ - Bug Fix: Active loading indicator image could not be overriden in the Images tab
+
+Version 1.1.3:
+ - Change: tpl_dir is no longer a required parameter for the {jrAnnika_live_wall} template function
+
+Version 1.1.2:
+ - Change: Global Config Tab Name changes
+
+Version 1.1.1:
+ - New: Target style and class parameters can now be passed into the jrAnnika_live_wall smarty call
+
+Version 1.1.0:
+ - New: Added functions for dynamically updating live wall parameters
+
+Version 1.0.0:
+ - Initial Release

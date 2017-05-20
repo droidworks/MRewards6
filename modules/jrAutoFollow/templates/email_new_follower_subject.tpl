@@ -1,0 +1,1 @@
+@{$user_name} - you have a new {$system_name} follower!

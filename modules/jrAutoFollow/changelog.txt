@@ -1,0 +1,13 @@
+Auto Follow module changelog:
+
+Version 1.1.2:
+ - Change: Updated module icon
+
+Version 1.1.1:
+ - New: Followed profiles approval option added
+
+Version 1.1.0:
+ - New: Followed profiles notification option added
+
+Version 1.0.0:
+ - Initial Release

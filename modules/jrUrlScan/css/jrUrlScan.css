@@ -1,0 +1,15 @@
+#urlscan_target {
+    margin-top: 5px;
+    padding: 5px;
+    display: none;
+}
+
+#urlscan-player-div {
+    display: none;
+}
+
+.urlscan_card {
+    border: 1px solid #EEEEEE;
+    border-radius: 3px;
+    padding: 10px;
+}

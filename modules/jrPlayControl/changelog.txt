@@ -1,0 +1,7 @@
+User Play Control module changelog
+
+Version 1.0.2:
+ - Change: Name in ACP now reads "User Play Control" to match marketplace. Previously "Play Control"
+
+Version 1.0.1:
+ - Adding new Changelog

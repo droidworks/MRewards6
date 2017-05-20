@@ -1,0 +1,19 @@
+Solo Artist module changelog
+
+Version 1.0.5:
+ - Bug Fix: Updated player templates to fix media play error.
+
+Version 1.0.4:
+ - Change: Name of the module in the ACP now reads "Solo Artist Control" instead of just "Solo Artist"
+
+Version 1.0.3:
+ - Bug Fix: apostrophies in song names display wrong in the player
+
+Version 1.0.2:
+ - Bug Fix: Bad link to audio player CSS file
+
+Version 1.0.1:
+ - Updated player templates
+
+ Version 1.0.0:
+ - Initial Release

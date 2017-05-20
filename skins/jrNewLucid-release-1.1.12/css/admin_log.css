@@ -1,0 +1,69 @@
+#error_log {
+    font-family: Monaco, "Lucida Console", monospace;
+    width:98%;
+    padding:6px;
+    margin:10px auto;
+    font-size: 10px;
+    white-space:pre-line;
+}
+
+#debug_log {
+    font-family: Monaco, "Lucida Console", monospace;
+    width:98%;
+    padding:6px;
+    margin:10px auto;
+    font-size: 10px;
+    white-space: pre-line;
+}
+
+/* @title Info Log */
+/* @help Background color for Informational (INF) Log entries */
+.log-inf {
+    background-color: transparent;
+    text-align: left;
+}
+
+/* @title Minor Log */
+/* @help Background color for Minor (MIN) Log entries */
+.log-min {
+    background-color: #FFCC00;
+    text-align: left;
+}
+
+/* @title Major Log */
+/* @help Background color for Major (MAJ) Log entries */
+.log-maj {
+    background-color: #FF9900;
+    text-align: left;
+}
+
+/* @title Critical Log */
+/* @help Background color for Critical (CRI) Log entries */
+.log-cri {
+    background-color: #FF6600;
+    text-align: left;
+}
+
+.php_Notice {
+    color: #333333;
+}
+
+.php_Warning {
+    color: #FF9900;
+}
+
+.php_Fatal, .php_Parse {
+    color: #FF0000;
+}
+
+.CodeMirror {
+    background-color:#FFF;
+    color:#000;
+    width:98%;
+    padding:6px;
+    margin:8px auto 0 auto;
+    font-size:12px;
+    border: solid 1px #CCCCCC;
+    overflow: auto;
+}
+

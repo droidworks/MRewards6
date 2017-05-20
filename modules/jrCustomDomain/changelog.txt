@@ -1,0 +1,58 @@
+Profile Custom Domains module changelog
+
+Version 1.0.16:
+ - Bug Fix: profiles with custom domains may get incorrect linked profile_id on login
+
+Version 1.0.15:
+ - New: Apache configuration files are now validated during an Integrity Check
+ - New: SSL on/off shows for mapped custom domains in Custom Domain browser
+
+Version 1.0.14:
+ - Change: "www" version of domain is now always included in Apache conf include file
+
+Version 1.0.13:
+ - Change: Module name changed from "Custom Domains" to "Profile Domains"
+
+Version 1.0.12:
+ - Change: Updated to work with media URL Scanner and mapped profile domains
+
+Version 1.0.11:
+ - Bug Fix: Apache domain server include files not being removed when module is disabled
+
+Version 1.0.10:
+ - Bug Fix: Previous/Next page URLs may be incorrect on some profile page lists
+
+Version 1.0.9:
+ - Bug Fix: Previous and Next page buttons in some module footers not using mapped domain
+
+Version 1.0.8:
+ - New: Updated notices to indicate web server restart is required for changes to take effect
+ - Bug Fix: "Use WWW" option not being written to Apache include file correctly
+ - Bug Fix: Auto redirect for SSL to non-SSL removed as it could create a page reload loop
+
+Version 1.0.7:
+ - Bug Fix: Next and Prev page URLs in profile timeline using site domain instead of custom domain
+
+Version 1.0.6:
+ - Change: "Use WWW" option when creating a new mapped domain now defaults to "on"
+ - Bug Fix: If "Use WWW" was not checked, "www" version of domain would go to default Apache site
+
+Version 1.0.5:
+ - Change: OG Tags now show mapped URL to handle recent Facebook changes to sharing
+ - Change: Success message when creating a new domain includes message to restart Apache
+
+Version 1.0.4:
+ - Bug Fix: The Facebook embed agent may be blocked inadvertently
+
+Version 1.0.3:
+ - New: User Agent checking allows Open Graph tags on mapped domains to work with ShareThis
+
+Version 1.0.2:
+ - Change: Load priority moved lower to allow other module listeners to run first
+ - Change: internal function updates to integrate properly with core media functions
+
+Version 1.0.1:
+ - Change: Apache Include .conf files now contain "placeholder" when no domains configured
+
+Version 1.0.0:
+ - Initial Release

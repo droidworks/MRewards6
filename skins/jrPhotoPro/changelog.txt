@@ -1,0 +1,178 @@
+PhotoPro Skin changelog
+
+Version 1.4.3:
+ - Change: Added check for tablet so mobile menu shows. Modified templates: header.tpl, header_menu_mobile.tpl and footer.tpl
+ - Change: Changed by-line color for chat. Modified CSS file: chat.css
+
+Version 1.4.2:
+- Change: Fixed padding for chat by line that overlapped the chat text.
+
+Version 1.4.1:
+ - New: Added chat CSS file for the new chat module.
+ - Change: profile_menu.tpl adjusted to match module version to allow for System Tips to work
+ - Change: Changed scroll up to use an icon instead of an image. Templates modified: footer.css, footer.tpl
+ - Change: Added timeline CSS for share modal window. Modified action.css file.
+
+Version 1.4.0:
+ - Change: Updated profile templates and CSS files to accommodate new video player
+ - Change: Updated CSS files to fix attach file button.
+ - Change: Removed bottom positioning for share this checkbox on timeline form.
+ - New: Added YouTube and Pinterest social links and images to the footer template.
+
+Version 1.3.2:
+ - Bug Fix: Fixed background color for combined video and audio drop down box.
+
+Version 1.3.1:
+ - Bug Fix: Fixed URL for Google link in the footer.tpl
+
+Version 1.3.0:
+ - New: Added social icons to the footer
+ - New: Added comments to profile index, controlled by skin settings.
+ - Change: Changed footer contact link to a mailto link if the custom from module is not active.
+
+Version 1.2.11:
+ - Bug Fix: Fixed layout on pages with side by side images.
+
+Version 1.2.10:
+ - Change: Changed mobile menu to the sidebar menu.
+ - Change: Moved carousel toggle button to the main menu bar.
+
+Version 1.2.9:
+ - Bug Fix: Added a check for the private notes module around the contact us link.
+ - Template Files:
+   ------------------------------------------------------
+    Modified: footer.tpl
+   ------------------------------------------------------
+
+Version 1.2.8
+ - Bug Fix: Fixed editor full screen view from hiding behind the site header.
+ - Bug Fix: Fixed font color for stats boxes.
+ - CSS Files Modified
+ ==========================================
+    core_header.css     core_profile.css
+ ==========================================
+
+Version 1.2.7:
+ - New: Profile custom logo support
+ - Template Files Modified:
+   ------------------------------------------------------
+    header.tpl
+   ------------------------------------------------------
+
+Version 1.2.6:
+ - Bug Fix: Fixed recently rated box on the profile page
+
+Version 1.2.5:
+ - New: Added profile mobile menu.
+ - Files Modified/Added:
+   ------------------------------------------------------
+    mobile_core.css             profile_header.tpl
+    profile_menu_mobile.tpl
+   ------------------------------------------------------
+
+Version 1.2.4:
+ - Change: Removed mousewheel jquery.
+ - Bug Fix: Modified header to be more mobile responsive.
+ - Bug Fix: Modified footer java script to use document onload function.
+ - Files Modified:
+   ------------------------------------------------------
+    include.php                 header.tpl
+    index.tpl                   footer.tpl
+   ------------------------------------------------------
+
+Version 1.2.3:
+ - Fixed: Modified image sizes to fit better.
+ - Files Modified:
+   ------------------------------------------------------
+    core_flexsider.css               header.tpl
+    index.tpl
+   ------------------------------------------------------
+
+Version 1.2.2:
+ - New: Added a Jamroom 180x150 banner instead of using the skins icon in the 180x150 Ad space.
+ - File Modified:
+   ------------------------------------------------------
+    galleries.tpl               index.tpl
+   ------------------------------------------------------
+
+Version 1.2.1:
+ - Change: Centered profile image on the profile page for mobile devices when logged out.
+ - File Modified:
+   ------------------------------------------------------
+    profile_header.tpl
+   ------------------------------------------------------
+
+Version 1.2.0:
+ - Fixe: Fixed image crop ratios that were set to w:h.
+ - File Modified:
+   ------------------------------------------------------
+    galleries_images.tpl            index_featured_slider.tpl
+    index_images.tpl                index_slider.tpl
+   ------------------------------------------------------
+
+Version 1.0.10:
+ - Change: Centered profile image on the profile page for mobile devices.
+ - New: Added System Updates link to the ACP drop down menu.
+ - File Modified:
+   ------------------------------------------------------
+    mobile_core.css             en-US.php
+    header.tpl
+   ------------------------------------------------------
+
+Version 1.0.9:
+ - New: Added more editable sections skins CSS admin panel area.
+
+Version 1.0.8:
+ - Bug Fix: Fixed language strings in contact_us.tpl file.
+ - Bug Fix: Fixed image sizes to accommodate new crop settings.
+ - Files Modified:
+   ------------------------------------------------------
+    en-US.php                       contact_us.tpl
+    galleries_images.tpl            index_featured_slider.tpl
+    index_images.tpl                index_slider.tpl
+   ------------------------------------------------------
+
+Version 1.0.7:
+ - Update to use smarty3 syntax for javascript wrappers
+
+Version 1.0.6:
+ - Change: Fixed image slider from overlapping photo list on tablets.
+ - Change: Changed index slider toggle image.
+ - Files Modified:
+   ------------------------------------------------------
+    core_flexslider.css         core_slider.css
+    index.tpl                   index_featured_slider.tpl
+    button_toggle_set.png
+   ------------------------------------------------------
+
+Version 1.0.5:
+ - Change: Updated page-table-jumper style.
+ - File Modified:
+   ------------------------------------------------------
+    core_table.css
+   ------------------------------------------------------
+
+Version 1.0.4:
+ - Change: Updated all skin images to use jrCore_image function instead of img tags.
+ - Change: Added a check on the profile page to see if the jrFollower module is active.
+ - Templates Modified:
+   ------------------------------------------------------
+    galleries.tpl       header.tpl
+    index.tpl           profile_footer.tpl
+   ------------------------------------------------------
+
+Version 1.0.3:
+ - Change: updated CSS for new actions styles.
+    ------------------------------------------------------
+    CSS File Modified: core_action.css
+    ------------------------------------------------------
+
+Version 1.0.2:
+ - Bug Fix: Gallery URLs could point to incorrect gallery if multiple galleries had the same name
+ - Change: update to use new Title Support in ACP
+
+Version 1.0.1:
+ - Updated CSS urls to allow for override by image upload override in the ACP
+
+Version 1.0.0:
+ - Initial Release

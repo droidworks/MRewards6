@@ -1,0 +1,91 @@
+/* @title Image Tag */
+/* @help This is the class for the img tag in your HTML */
+img {
+    border:0;
+    vertical-align:middle;
+    margin:0;
+    padding:0;
+    height:auto;
+}
+
+/* @title Image Icon */
+/* @help This is the icon image */
+.img_icon {
+    border:1px solid #bbb;
+    padding:1px;
+    margin-right:12px;
+}
+
+/* images (not icons) */
+.img_scale {
+  width:100%;
+}
+
+.img_shadow {
+    vertical-align:middle;
+    margin:0 -4px 0 0;
+    padding:0;
+    border:0;
+    box-shadow: 0 0 2px #000;
+}
+
+/* @title Image Outline */
+/* @help This is the small outline around small images */
+.ioutline {
+    vertical-align:middle;
+    margin:0 -4px 0 0;
+    padding:0;
+    box-shadow: 0 0 3px #000;
+}
+
+/* @title Image Outline Link */
+/* @help This is the small outline around small images that are linked */
+.iloutline {
+    border:0;
+    vertical-align:middle;
+    margin:0 -4px 0 0;
+    padding:0;
+    box-shadow: 0 0 2px #000;
+}
+
+/* @title Image Outline Hover */
+/* @help This is the hover color for the small outline around small images that are linked */
+.iloutline:hover {
+    border:0;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.ilfpoutline {
+    vertical-align:middle;
+    margin:0 -4px 0 0;
+    padding:0;
+    box-shadow: 0 0 3px #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.ilfpoutline:hover {
+    margin:10px;
+    pading:2px;
+    border:1px solid #CCCCCC;
+    box-shadow: 4px 4px 8px #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.create_img {
+    cursor:pointer;
+}
+
+.update_img {
+    cursor:pointer;
+}
+
+.delete_img {
+    cursor:pointer;
+}

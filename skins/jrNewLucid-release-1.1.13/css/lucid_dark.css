@@ -1,0 +1,311 @@
+html {
+    background-color: #444;
+}
+
+body {
+    color: #eee;
+}
+
+#wrapper {
+    background-color: #111;
+}
+
+#header {
+    background-image: linear-gradient(#333, #222);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
+}
+
+
+.menu_border {
+    border-top: 1px solid #181818;
+    border-bottom: 1px solid #383838;
+}
+
+#menu .create > a {
+    color: #ccc;
+}
+
+.index_item {
+    background: #222 none repeat scroll 0 0;
+    box-shadow: 0 0 2px #000;
+    color: #ccc;
+}
+
+.index_item h1 a {
+    color: #fff;
+}
+
+.sidebar .index_item .title > a {
+    color: #eee;
+}
+
+.list_head {
+    border-bottom: 1px solid #333;;
+}
+
+.list_head span {
+    color: #999;
+}
+
+.list_head .heading {
+    color: #FFE497;
+}
+
+.sidebar .index_item {
+    border-bottom: 1px dashed #444;
+}
+
+
+#footer {
+    background-image: linear-gradient(#333, #222);
+    border-top: 1px solid #444;
+}
+
+#footer_text {
+    color: #ccc;
+}
+
+#footer_text {
+    color: #ccc;
+}
+
+/* ////////////  PROFILE //////////////// */
+
+.profile_name_box, .title, .item {
+    background: #222222 none repeat scroll 0 0;
+    box-shadow: none;
+    color: #eee;
+}
+
+.profile_name {
+    color: #eee;
+}
+
+.action_item_holder {
+    border-bottom: 1px solid #444;
+}
+
+.action_item_holder:hover {
+    background: #333 none repeat scroll 0 0;
+}
+
+.form_button {
+    background-image: linear-gradient(#444, #333);
+    border: 1px solid #222222;
+    border-radius: 5px;
+    box-shadow: none;
+    color: #eee;
+}
+
+.page_tab_bar_holder {
+    background-color: #111;
+    border-bottom: 1px solid #444444;
+}
+
+.page_tab {
+    background-color: #222;
+    color: #cccccc;
+}
+
+.page_tab a {
+    color: #ccc;;
+}
+
+.page_tab_active {
+    background-color: #333333;
+    border-top: 1px solid #444444;
+    border-right: 1px solid #444444;
+    border-left: 1px solid #444444;
+}
+
+.page_section_header {
+    background-color: #111111;
+    color: #eeeeee;
+}
+
+.item-row {
+    background-color: #111 !important;
+}
+
+.item-row-active {
+    background-color: #000 !important;
+}
+
+.item-entry {
+    border-bottom: 0 solid #aaaaaa;
+    color: #fff !important;
+}
+
+.element_right, .element_left {
+    background-color: #222;
+}
+
+.form_submit_box {
+    background-color: #222;
+}
+
+.form_submit_section {
+    background-color: #111;
+}
+
+.page_tab_bar_spacer {
+    background-color: #333;
+}
+
+.page_notice_drop {
+    background: #333333 none repeat scroll 0 0;
+}
+
+.page_banner_box {
+    background-color: #333333;
+}
+
+.page_banner_left, .page_banner_right {
+    background-color: #333333;
+}
+
+.form_textarea {
+    background-color: #111;
+    border-color: #333;
+    color: #ccc;
+}
+
+.form_text {
+    background-color: #111;
+    border-color: #333;
+    color: #ccc;
+}
+
+.form_select {
+    background-color: #111;
+    border-color: #333;
+    color: #ccc;
+}
+
+.page_table_pager {
+    background-color: #111111;
+}
+
+.page_table {
+    background-color: #444;
+}
+
+.page_table_row_alt {
+    background-color: #111;
+}
+
+.page_table_row {
+    background-color: #151515;
+}
+
+.page_table_header {
+    background-color: #444;
+    color: #fff;
+}
+
+.acp-default-img {
+    border: 1px solid #444;
+}
+
+.page_table_cell {
+    color: #ccc;
+}
+
+.form_button_disabled {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+
+select:focus {
+    border-color: #333333;
+    background-color: #151515;
+}
+
+.profile_menu_entry {
+    background: #222 none repeat scroll 0 0;
+    box-shadow: 0 0 2px #000;
+    color: #eee;
+}
+
+.profile_menu_entry:hover {
+    background: #333333 none repeat scroll 0 0;
+}
+
+.item a {
+    color: #fff;
+}
+
+#menu ul {
+    background: #333 none repeat scroll 0 0;
+    box-shadow: 2px 3px 10px #000;
+}
+
+#menu ul a {
+    color: #EEEEEE;
+}
+
+.online_status_offline {
+    color: #666;
+}
+
+.online_status_user a {
+    color: tan;
+}
+
+.sprite_icon {
+    background: #333 linear-gradient(#333, #111) repeat scroll 0 0;
+    border: 1px solid #222;
+}
+
+.item_feedback a {
+    color: #ccc;
+}
+
+.action_item_holder {
+    border-bottom: 1px solid #111;
+    border-top: 1px solid #333;
+}
+
+.action_item_holder:first-child {
+    border-bottom: 1px solid #111;
+    border-top: none;
+}
+
+#content {
+    background: #333 none repeat scroll 0 0;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 0 2px #000;
+}
+
+td a {
+    color: tan;
+}
+
+/* @title Form Button Hover */
+/* @help Format for Form Buttons when the mouse is hovered over the button */
+.form_button:hover {
+    color: tan;
+}
+
+.block_content .block {
+    border-top: 1px solid #333;
+}
+
+#menu ul li {
+    border-bottom: 1px solid #222;
+    border-top: 1px solid #444;
+}
+.form_help_drop {
+    background-color: #222;
+}
+.form_help {
+    background-color: #111;
+}
+
+#item-work {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+}
+
+.time {
+    color: #888;
+}

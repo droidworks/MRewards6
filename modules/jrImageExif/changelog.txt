@@ -1,0 +1,15 @@
+Gallery Image EXIF module changelog
+
+Version 1.0.3:
+ - Change: Updated module icon
+
+Version 1.0.2:
+ - New: Support added for JPE and JFIF jpeg image formats
+ - Change: FileDataTime EXIF key replaced with DateTimeOriginal to be more accurate
+
+Version 1.0.1:
+ - Change: Updated Server Check listener to check for EXIF function support in PHP
+ - Change: PHP warnings from missing EXIF data no longer appears in error_log when running in Developer Mode
+
+Version 1.0.0:
+ - Initial Release

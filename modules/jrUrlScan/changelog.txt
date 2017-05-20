@@ -1,0 +1,99 @@
+Media URL Scanner module changelog
+
+Version 1.1.12:
+ - Bug Fix: URLs missing OG tags could repeatedly be checked by Queue worker
+ - Bug Fix: Better pattern matching for URLs created in the WYSIWYG editor
+ - Bug Fix: Some URLs not being replaced with the proper URL card
+ - Bug Fix: URLs that did not begin with "http" could make it in to the card function
+
+Version 1.1.11:
+ - Bug Fix: URL's not being converted to youtube players in comments if editor enabled
+
+Version 1.1.10:
+ - Bug Fix: Better handling of URLs when embedded within HTML using the editor
+
+Version 1.1.9:
+ - Bug Fix: Some URLs within anchor tags were being converted to URL Scan players
+
+Version 1.1.8:
+ - New: Added a method for modules to look up og:tags detail pages on modules that provide their own player
+
+Version 1.1.7:
+ - New: URL Scan card image validated when an existing URL is posted again in the system
+ - Bug Fix: "Daily URL Checks" setting may not work correctly during daily maintenance
+
+Version 1.1.6:
+ - Bug Fix: Some URLs may not get converted if embedded within A LOT of text
+
+Version 1.1.5:
+ - Change: If a URL is entered on the Timeline, but then removed, the preview card is now removed as well
+ - Bug Fix: Some URLs may not be converted to a URL card
+
+Version 1.1.4:
+ - New: "Daily URL Checks" global config setting to validate URLs during daily maintenance
+ - Change: URLs that result in a 404 Not Found are no longer cached
+ - Bug Fix: Local URLs that do not have a media player were not showing a URL card
+
+Version 1.1.3:
+ - Bug Fix: Player was being placed inside anchor tag cauding issues with display in some cases
+
+Version 1.1.2:
+ - Bug Fix: "Card" for a URL was not getting created under some server setups
+
+Version 1.1.1:
+ - Bug Fix: Some YouTube URLs may not have their YouTube ID extracted correctly
+
+Version 1.1.0:
+ - New: Updated with new "card" support for retrieving info for all URLs with OG tags
+ - Change: "Expanded Media" global config setting now defaults to "on"
+
+Version 1.0.14:
+ - New: "all_found_urls" event that is fired with all URLs found in the text
+ - Bug Fix: The same URL on a page more than once may not play properly
+
+Version 1.0.13:
+ - Change: "Immediate Replace" renamed to "Expanded Media" in Global Config
+ - Bug Fix: Multiple embedded media items not always working correctly
+
+Version 1.0.12:
+ - New: Option to have URL's immediately converted into media instead of a link
+ - New: jrUrlScan smarty call, with option for 'immediately replacement' added
+ - New: Option to precede link title with a play button to make it clear that clinking will open player
+
+Version 1.0.11:
+ - Bug Fix: Some non-URLScan URLs were not being replaced properly
+
+Version 1.0.10:
+ - Change: Media URLs will now load with a single click on mobile devices
+ - Change: URL slide open/close now uses an animation to be a little smoother
+ - Bug Fix: Multiple embedded URLs in same text now works properly
+
+Version 1.0.9:
+ - Bug Fix: URLs with a tilde (~) in them were not being replaced properly
+
+Version 1.0.8:
+ - Change: Updated to prevent other string plugins from affecting URL Scan URLs
+
+Version 1.0.7:
+ - Bug Fix: Further fixes and optimizations for URL replacements
+
+Version 1.0.6:
+ - Bug Fix: Auto-linking not working on some URLs with specific characters
+
+Version 1.0.5:
+ - Bug Fix: non-media URLs not being made clickable if specific characters found in URL
+
+Version 1.0.4:
+ - Bug Fix: some URLs when replaced may have first character after URL trimmed
+
+Version 1.0.3:
+ - Bug Fix: Multiple URLs in same text string with same "base" URL may not all get converted
+
+Version 1.0.2:
+ - Bug Fix: unique IDs created for player divs not unique enough
+
+Version 1.0.1:
+ - Bug Fix: URLs in text only separated by newlines may not get converted to a clickable URL
+
+Version 1.0.0:
+ - Initial Release

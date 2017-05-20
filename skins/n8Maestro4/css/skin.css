@@ -1,0 +1,391 @@
+section {
+    position: relative;
+    color: #eee;
+    overflow: hidden;
+}
+
+.pad {
+    padding: 0 2em;
+    position: relative;
+}
+
+.actions > ul {
+    height: 34px;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.textArea .loader {
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+}
+
+.block_search {
+    right: 0;
+    position: absolute;
+    text-align: right;
+    top: 13px;
+    white-space: nowrap;
+    width: auto;
+}
+
+div#chart .item:first-child {
+    margin: 0;
+}
+
+div#chart .item:last-child {
+    margin: 1em 0 0;
+}
+
+span.title {
+    font-size: 16px;
+}
+
+.action span.title {
+    font-size: 18px;
+}
+
+.index .title > a {
+    font-size: 20px;
+}
+
+#horizontal .hideshow > a:first-child {
+    border-right: medium none;
+}
+
+.p10 > h1 {
+    margin: 0;
+}
+
+.CodeMirror {
+    background: #0f1418 none repeat scroll 0 0;
+    color: white;
+}
+
+.shadow {
+    box-shadow: 1px 1px 10px #000;
+}
+
+.middle > div.overlay {
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.index > .full > .middle .overlay > .wrap {
+    padding: 1em 2em 4em;
+}
+
+.index .middle {
+    width: 100%;
+    z-index: 75;
+}
+
+.index.final .middle {
+    top: 47%;
+}
+
+.index .col6 > span:last-child {
+    padding: 0 0 0 10px;
+}
+
+.index .col6 > span {
+    padding: 0 10px 0 0;
+}
+
+.down {
+    border-radius: 100%;
+    bottom: -31px;
+    height: 62px;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 62px;
+    z-index: 76;
+}
+
+.down > a {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/down.png") no-repeat scroll 0 0;
+    display: block;
+    height: 40px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+}
+
+.down.up > a {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/up.png") no-repeat scroll 0 0;
+}
+
+.final .middle div.overlay {
+    margin: 0 0 2em;
+}
+
+.index_list {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)) repeat scroll 0 0;
+    bottom: 0;
+    height: 160px;
+    position: absolute;
+    width: 100%;
+}
+
+.index a {
+    font-weight: bold;
+}
+
+section.index {
+    min-height: 100vh;
+}
+
+.col12.left > h1 {
+    margin: 0.5em;
+    text-align: left;
+}
+
+.col12.slogan {
+    text-align: right;
+}
+
+.index.features .overlay {
+    top: 0;
+}
+
+.col12.slogan > h1 {
+    margin: 10px 0 0;
+}
+
+.col12.slogan > p {
+    margin: 0;
+    color: white;
+}
+
+.index_blog {
+    padding: 1.5em 0;
+}
+
+.index_blog .shadow {
+    box-shadow: 1px 1px 5px #333;
+}
+
+.index_blog .media_image {
+    box-shadow: none;
+}
+
+.index.features > .middle .overlay > .wrap {
+    padding: 0;
+}
+
+.index .row {
+    max-width: 1280px;
+}
+
+.box_body {
+    border-radius: 0 8px 8px;
+}
+
+#actions_tab > li, .head_tab > li {
+    float: left;
+    list-style: outside none none;
+    padding: 7px;
+}
+.full {
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 18px;
+}
+.p5 > h2 {
+    margin: 0;
+}
+
+.p5 h3 {
+    margin: 0 0 5px;
+}
+
+h3 {
+    text-align: left;
+}
+
+.social h2 {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 8px;
+    margin: 0 0 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer {
+    bottom: 0;
+    height: 160px;
+    position: relative;
+    width: 100%;
+}
+
+.social > li {
+    float: left;
+    list-style: outside none none;
+    width: 20%;
+}
+
+.social li a {
+    background: #666 none repeat scroll 0 0;
+    display: block;
+    height: 50px;
+    margin: auto;
+    width: 50px;
+}
+
+.social {
+}
+
+ul.social {
+    display: block;
+    margin: 1em auto;
+    min-width: 320px;
+    width: 50%;
+}
+
+.social li a.social-facebook {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/social-facebook.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-twitter {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/social-twitter.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-google {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/social-google.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-linkedin {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/social-linkedin.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-youtube {
+    background: rgba(0, 0, 0, 0) url("{$jamroom_url}/skins/n8Maestro4/img/social-youtube.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-facebook:hover,
+.social li a.social-twitter:hover,
+.social li a.social-linkedin:hover,
+.social li a.social-youtube:hover,
+.social li a.social-google:hover {
+    background-position: 0 -50px;
+}
+
+.social > div {
+    clear: both;
+    color: #bbb;
+    font-size: 11px;
+    letter-spacing: 4px;
+    padding: 2em 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.index_blog p {
+    font-size: 14px;
+}
+
+.col12.left > h1 {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.col12.slogan > h1 {
+    font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.features .overlay .col4 > .wrap {
+    padding: 0 1em 1em;
+}
+
+.index_list h1 {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 1em 5px 0;
+}
+
+.final .col12 > p {
+    margin: 2em;
+}
+
+.item > .item {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+}
+
+.fs {
+    padding: 90px 0 0;
+    min-height: calc(100vh - 251px);
+}
+.widget-item-widget_gallery .col3 {
+    padding: 1px;
+    width: 24.2%;
+}
+
+
+
+.image_stack2 {
+    left: 42px !important;
+}
+.image_stack1 {
+    left: 21px !important;
+}
+
+.button_player a.jp-play, .button_player a.jp-pause {
+    display: none;
+}
+
+.box > span {
+    float: none;
+    font-size: 18px;
+    left: 45px;
+    position: absolute;
+    text-transform: capitalize;
+    top: 18px;
+}
+
+.box .block_search .form_text {
+    width: 77%;
+}
+
+.bundle_box {
+    background-color: #333;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+    border: medium none;
+    box-shadow: 1px 0 5px 3px #000;
+}
+
+.index h1 {
+    font-size: 2em;
+    font-weight: 100;
+    text-shadow: 1px 1px 1px #333;
+    text-transform: uppercase;
+}
+
+.index .overlay h1 {
+    text-shadow: none;
+}
+
+
+/* This section is mainly for Maestro documentation. You may wanna delete it */
+.widget-item-widget_html .item li {
+    list-style: inherit;
+}
+
+.box > .block_search > h3 {
+    display: inline;
+}
+
+.item .col1 > span {
+    font-weight: bold;
+}

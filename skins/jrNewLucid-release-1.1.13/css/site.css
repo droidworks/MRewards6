@@ -1,0 +1,97 @@
+#wrapper {
+    background-color: #f6f6f6;
+    margin: 0 auto;
+    min-height: calc(100vh - 218px);
+    padding: 118px 0 100px;
+    position: relative;
+}
+
+/* @title Site Content */
+/* @help This is the main Site Content holder */
+#content {
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 0 2px #ccc;
+    font-size: 1em;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+#content > form {
+    padding: 9px;
+}
+
+#content > #admin_container {
+    padding: 9px;
+}
+
+.search_results_container {
+    padding: 9px;
+}
+
+/* @title block */
+/* @help This is the main style for the individual blocks of the page */
+.block {
+    background-color: transparent;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+.recommend_box {
+    background-color: #EDEDED;
+    padding: 25px;
+    margin: 12px;
+    border-style: solid;
+    border-color: #DDDDDD;
+    border-width: 1px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.recommend_box a {
+    color: #336699;
+    text-decoration: none;
+}
+
+.recommend_box a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.search_box {
+    background-color: #EDEDED;
+    padding: 25px;
+    margin: 12px;
+    border-style: solid;
+    border-color: #DDDDDD;
+    border-width: 1px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.search_box a {
+    color: #336699;
+    text-decoration: none;
+}
+
+.search_box a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.page_content #admin_container.container {
+    background: rgba(0, 0, 0, 0) scroll no-repeat 0 0;
+    box-shadow: none;
+}
+
+#admin_container .item {
+    box-shadow: none;
+}
+
+.page_content {
+    padding: 10px;
+}
+
+#item-work .page_content {
+    padding: 0;
+}

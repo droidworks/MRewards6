@@ -1,0 +1,53 @@
+BeatSlinger changelog
+
+Version 1.1.8:
+ - Change: css image fixes
+
+Version 1.1.7:
+ - Change: combined audio and video pages repaired
+
+Version 1.1.6:
+ - Change: Added submit button to comments
+
+Version 1.1.5:
+ - Fix: Css fixes
+ - Fix: row template fixes
+ - Change: added accordion behavior to audio and video details pages
+
+Version 1.1.4:
+ - Bug Fix: js error occurred when player was embedded
+
+Version 1.1.3:
+ - Fix: Changed social links URL variable to the correct variable. Modified footer.tpl
+ - Change: profile menu repairs
+ - Change: require price is now default off
+
+Version 1.1.2:
+ -Fix: CSS updates
+
+Version 1.1.1:
+	Change: added new player n8Player_playlist_action_player for timeline playlists.
+
+Version 1.1.0:
+ - Upgrade: Added siderbar to module index, details and category/albums for all modules.
+ - Upgrade: profile headers can now be hidden on all module pages
+ - Change: Added list pagebreak setting for dynamic lists
+
+Version 1.0.5:
+ - CHange: feedback buttons are now visible when not logged in.
+
+Version 1.0.4:
+ - Fix: added missing jrStore_item_action.tpl
+ - Change: removed 'page_conent' class from module indexes
+
+Version 1.0.3:
+ - Change: header and sidebar drop for forum and groups
+
+Version 1.0.2:
+ - Change: removed truncate from profile bio and replaced it with max-height div
+
+ Version 1.0.1:
+ - Change: minor CSS fixed
+
+ Version 1.0.0:
+ - Change: Initial Release

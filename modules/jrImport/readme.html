@@ -1,0 +1,57 @@
+<table>
+    <tr>
+        <td style="vertical-align:top;padding:10px;">
+            <h2>Jamroom5 jrImport Module</h2>
+            <b>Revision History</b>
+            <ul>
+                <li>V1.0.0 dd mmm yyyy - Initial release.</li>
+            </ul>
+            <b>Description</b>
+            <ul>
+                <li>Provides a Jamroom5 tool to import items (songs, videos, blogs etc.) from a Jamroom4 site into a Jamroom5 site.</li>
+            </ul>
+            <b>Installation</b>
+            <ul>
+                <li>Copy this module and all its files and folders to the Jamroom5 modules directory.</li>
+                <li>Jamroom4 database info and files are sourced via the custom module jrExport supplied with this module in the Jamroom4_jrExport_Module folder. Install this module on the Jamroom4 system in the normal way. If you have cluster servers, be sure to synchronise them so that the jrExport module is copied to all clusters.</li>
+                <li>Communication with the Jamroom4 module is verified via a key code. In jrExport settings, enter an alphanumeric key of your choice.</li>
+                <li>To configure this jrImport module, click on its Global Config tab. The help buttons against each field provides full information on what is required.</li>
+                <li>Note the quota selection field(s) that define how Jamroom4 quotas are mapped to Jamroom5 quotas. If you want your Jamroom4 artists and members to be imported to equivalent Jamroom5 quotas, you need to create them prior to import.</li>
+                <li>When saving this form, jrImport attempts a test communication with the Jamroom4 jrExport module and reports the result.</li>
+            </ul>
+            <b>Usage</b>
+            <ul>
+                <li>Click on the module's Tools tab, then the Import button.</li>
+                <li>There is an extensive list of checkbox options to control the importing of all Jamroom4 items. The help button against each checkbox gives more information.</li>
+                <li>All checkboxes are enabled by default. Leave them as such and run the import process. Hopefully all will go well and you shouldn't need to uncheck any of these options before retrying (see below).</li>
+                <li>Jamroom4 database tables for each item are read, looped through, tested for validity and the equivalent Jamroom5 items are created. Any associated media files are copied to the correct Jamroom5 profile folder.</li>
+                <li>Import progress is reported in a modal window. The same progress information is written to the /data/logs/jrImport_log file.</li>
+                <li>After successfully importing your Jamroom4 site, keep this module installed and enabled as it also provides a password listener that allows users to login to the new Jamroom5 site with their original password. You may now want to lock the module (Global Config) to prevent any accidental re-imports.</li>
+            </ul>
+            <b>Troubleshooting</b>
+            <ul>
+                <li>Transferring data and files (particularly large media files) over the internet is hazardous!! Its not uncommon to encounter timeouts and other errors that can cause this import process to hang. If there is no import progress for more than a few minutes, refresh the page and click the Reset Progress Table help button for what to do if/when this happens.</li>
+            </ul>
+            <b>Caveats</b>
+            <ul>
+                <li><b>It is highly recommended that Jamroom4 sites are only imported to new, freshly installed Jamroom5 sites so as to avoid profile, user and item conflicts</b></li>
+                <li>As all Jamroom4 media files are copied to the Jamroom5 system, please ensure that you have enough disk space for them all.</li>
+                <li>In addition to the above, Jamroom5 converts media to MP3 and FLV formats, saving the original files. Also, if media files are 'for sale', sample files are generated. The upshot is that its difficult to assess how much Jamroom5 disk space is needed for the import so maybe best to initially have twice as much of the Jamroom4 site usage available.</li>
+                <li>The whole of the import process takes time, particularly when copying media files. One hour per 10 Gigabytes of data is not uncommon. Please be patient.</li>
+                <li>A good knowledge of both Jamroom4 and Jamroom5 systems is essential for understanding and using this module.</li>
+                <li>MOST IMPORTANT: Please be aware that Jamroom4 and Jamroom5 systems are completely different and not 100% compatible. Not all Jamroom4 item data may be imported or be immediately visible in the Jamroom5 system. jrImport will import Jamroom4 items to compatible Jamroom5 modules, not necessarily equivalent, eg. Channels and Stations are converted to Playlists. Not all Jamroom4 media files are used by Jamroom5, eg. Playlists have no associated image, so Jamroom4 Channel and Station images are lost. Also, Jamroom4 user images are not imported, but copied from the Jamroom5 Profile image.</li>
+                <li>Jamroom4 song and video items for sale as vault items will have their price set in Jamroom5, but be aware that the download file upon sale is the original media file, not the optionally uploaded Jamroom4 vault file.</li>
+                <li>Store, photo and event (tickets) Jamroom4 vault items are not imported. Other Jamroom4 vault items are imported to the jrFile module and sold from there (please ensure that jrFile is configured to accept the required file extensions).</li>
+                <li>No Jamroom4 sales history is imported.</li>
+                <li>No Jamroom4 activity or error logs are imported.</li>
+            </ul>
+            <b>Import Service</b>
+            <ul>
+                <li>If all of this seems a bit daunting, Jamroom Network offers an import service. Please visit http://jamroomnetwork.com/xxxx for more information.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+

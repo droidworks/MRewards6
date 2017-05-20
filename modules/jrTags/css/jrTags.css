@@ -1,0 +1,65 @@
+.tag_name_box {
+    float: left;
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 3px 6px 6px 6px;
+    margin: 6px 6px 0 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.tag_name_box a {
+    text-decoration: none;
+}
+
+.tag_name_box:hover {
+    background-color: #EEEEEE;
+}
+
+#tag_holder {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#tag_cloud {
+    background-color: #DDDDDD;
+    color: #000000;
+    border-radius: 5px 5px 0 0; /* @ignore */
+}
+
+#tag_cloud:hover {
+    background-color: #444444;
+    color: #FFFFFF;
+}
+
+#tag_cloud_button a {
+    text-decoration: none;
+}
+
+#profile_tag_cloud {
+    display: inline-block;
+}
+
+.tag_name_box_small {
+    float: left;
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #999999;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 2px 5px 2px 5px;
+    margin: 4px 4px 0 0;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+/* tags hidden by default */
+.row_tag_list {
+    display: none;
+}

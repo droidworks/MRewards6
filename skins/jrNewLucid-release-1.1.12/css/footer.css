@@ -1,0 +1,122 @@
+#footer {
+    background-image: linear-gradient(#444, #222);
+    border-top: 1px solid #555;
+    bottom: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    height: 99px;
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+}
+/* @title Footer Links */
+/* @help Footer text URL */
+#footer a {
+    color: #00ab6b;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* @title Footer Link Hover */
+/* @help Footer text URL hover */
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer_content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer_logo {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+/* @title Footer Text */
+/* @help Footer text */
+#footer_text {
+    color: #ccc;
+    font-size: 14px;
+    padding: 30px 10px 0;
+    text-align: left;
+}
+
+/* @title Footer Social Networks */
+/* @help the social network icons located in the footer */
+#footer_sn {
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 10px;
+    right: 65px;
+    display: none;
+    z-index: 300;
+}
+
+.scrollup:hover {
+    opacity: 1;
+}
+
+.social > li {
+    display: inline-block;
+    list-style: outside none none;
+    padding: 0 5px;
+}
+.social li a {
+    background: #666 none repeat scroll 0 0;
+    display: block;
+    height: 50px;
+    margin: auto;
+    width: 50px;
+}
+.social {
+    padding: 10px 0;
+}
+ul.social {
+    display: block;
+    margin: 0;
+    min-width: 320px;
+    text-align: right;
+    width: 100%;
+}
+
+.social li a.social-facebook {
+    background: rgba(0, 0, 0, 0) url("{$jrNewLucid_img_url}/social-facebook.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-twitter {
+    background: rgba(0, 0, 0, 0) url("{$jrNewLucid_img_url}/social-twitter.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-google {
+    background: rgba(0, 0, 0, 0) url("{$jrNewLucid_img_url}/social-google.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-linkedin {
+    background: rgba(0, 0, 0, 0) url("{$jrNewLucid_img_url}/social-linkedin.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-youtube {
+    background: rgba(0, 0, 0, 0) url("{$jrNewLucid_img_url}/social-youtube.png") no-repeat scroll 0 0;
+}
+
+.social li a.social-facebook:hover,
+.social li a.social-twitter:hover,
+.social li a.social-linkedin:hover,
+.social li a.social-youtube:hover,
+.social li a.social-google:hover {
+    background-position: 0 -50px;
+}
+
+
+#footer .col6 > .wrap {
+    padding: 1em 1em 0;
+}

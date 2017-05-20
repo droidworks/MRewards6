@@ -1,0 +1,132 @@
+#forum_success {
+    background-color:#1D9B1D;
+    color:#EDEDED;
+    padding:6px;
+    padding-left:12px;
+    border-radius:5px;
+    border:1px solid #083308;
+    margin:12px;
+}
+
+#forum_notice {
+    background-color:#083308;
+    color:#EDEDED;
+    padding:6px;
+    padding-left:12px;
+    border-radius:5px;
+    border:1px solid #1D9B1D;
+    margin-bottom:6px;
+}
+
+.forum_post_image {
+    display:table-cell;
+    width:10%;
+    padding:6px;
+    vertical-align:top;
+    text-align:center;
+}
+.forum_post_text {
+    display:table-cell;
+    width:90%;
+    padding:6px 12px;
+    vertical-align:top;
+}
+
+.forum_post_count {
+    background:transparent;
+    text-align:right;
+    float:right;
+    font-size:14px;
+    border-radius:4px;
+    padding:6px 6px 6px 9px;
+    margin-right:6px;
+}
+.forum_post_count_new {
+    background-color:#1D9B1D;
+    border-color:#083308;
+}
+.forum_post_count img {
+}
+.forum_post_pinned {
+    border-style:dotted;
+    border-width:2px;
+}
+
+.forum_new_post_form {
+    font-size:16px;
+}
+
+.forum_actions {
+    position:absolute;
+    top:12px;
+    right:12px;
+    display:none;
+}
+
+.forum_locked {
+    margin:12px 0;
+    background-color:#990000;
+    border-radius:4px;
+    padding:12px;
+    color:#EDEDED;
+}
+
+.forum_post_attachment {
+    margin:20px 0;
+    background-color:#FFDD00;
+    border:1px solid #000;
+    border-radius:4px;
+    padding:6px
+}
+
+.forum_follow_box {
+    position:inherit;
+    width:300px;
+    text-align:center;
+    background-color:#EEEEEE;
+    border:1px solid #083308;
+    border-radius:5px;
+    padding:12px;
+    z-index:100;
+    overflow:visible;
+    box-shadow:0 0 2px #000;
+    color:#083308;
+}
+
+/* BBCode */
+.bbcode_url {
+}
+
+.bbcode_list_ul {
+}
+
+.bbcode_list_ol {
+}
+
+.bbcode_code {
+    padding:12px;
+    background-color:#333;
+    font-family:monospace;
+    font-size:12px;
+    clear:both;
+    border:1px solid #000;
+    text-transform:none;
+}
+
+.bbcode_quote {
+    margin-top:6px;
+    padding:12px;
+    background-color:#333;
+    font-size:14px;
+    font-style:italic;
+    border:1px solid #000;
+}
+
+.bbcode_quote_user {
+    font-size:16px;
+    font-weight:bold;
+}
+#bbcode_help_button input{
+    margin-top: 2px;
+}
+

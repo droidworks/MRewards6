@@ -1,0 +1,53 @@
+Mogul changelog
+
+Version 1.1.5:
+ - Change: css image fixes
+
+Version 1.1.4:
+ - Bug Fix: combined audio and video pages repaired and other small fixes
+
+Version 1.1.3:
+ - Add accordion behavior to audio and video details pages
+
+Version 1.1.2:
+ - Change: profile menu changes
+
+Version 1.1.1:
+	Change: added new player n8Player_playlist_action_player for timeline playlists.
+
+Version 1.1.0:
+ - Upgrade: Added sidebar to module index, details and category/albums for all modules.
+ - Upgrade: profile headers can now be hidden on all module pages
+ - Change: Added list pagebreak setting for dynamic lists
+
+Version 1.0.9: 
+ - CHange: feedback buttons are now visible when not logged in.
+ 
+Version 1.0.8: 
+ - Fix: added missing jrStore_item_action.tpl
+ - Change: removed 'page_conent' class from module indexes
+
+Version 1.0.7:
+- Change: Minor CSS fixes
+
+Version 1.0.6:
+- Bug Fix: Fixed sidebar from showing on forum index
+
+Version 1.0.5:
+- Bug Fix: Fixed group header problem
+- Change: added profile_bio right config setting- 
+
+Version 1.0.4: 
+- Change: Css edits
+
+Version 1.0.3:
+ - Change: Css edits, site builder calendar and tabs, icon for profile influcence and rating otther minor css edits
+ 
+ Version 1.0.2:
+ - Change: removed truncate from profile bio and replaced it with max-height div
+
+Version 1.0.1:
+ - Change: minor css edits
+
+Version 1.0.0:
+ - Change: Initial Release

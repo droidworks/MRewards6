@@ -1,0 +1,14 @@
+2 Factor Authentication module change log
+
+Version 1.0.3:
+ - Bug Fix: "Continue URL" may not appear correctly in authentication code resend email
+
+Version 1.0.2:
+ - New: authentiction email now includes clickable link to directly log in
+
+Version 1.0.1:
+ - "Remember Login" now works correctly with 2 factor authentication enabled
+
+Version 1.0.0:
+ - Adding new Changelog
+ - Initial Release

@@ -1,0 +1,46 @@
+Jamroom 4 Import Module changelog
+
+Version 1.1.4
+ - New: song_isrc, song_alicense and song_slicense fields now included in imports
+
+Version 1.1.3
+ - New: band_soundlike and song_lyrics fields now included in imports
+
+Version 1.1.2
+ - Change: YouTube imports updated to do a better job of getting YouTube ID from text
+
+Version 1.1.1
+ - New: Remove Emoji function added for forum text imports
+ - Change: YouTube imports now include the publishedAt tag
+
+Version 1.1.0
+ - New: Import custom embedded video code to either the YouTube or Vimeo modules has been added
+
+Version 1.0.9
+ - Bug Fix: Imported text with accented characters wasn't being imported
+
+Version 1.0.8
+ - New: Audio and Video Genre tool to add missing genres: yoursite.com/import/add_audio_and_video_genre_urls
+ - Bug Fix: Imported songs and videos now have audio_genre_url and video_genre_url created
+
+Version 1.0.7
+ - Bug Fix: File size check to not import audio files under 100 bytes
+ - Bug Fix: Importing bands now saves the JR4 band_active variable in the profile datastore
+
+Version 1.0.6
+ - Bug Fix: Comment import checks that soundcloud, youtube or vimeo modules are active before importing a comment on them
+
+Version 1.0.5
+ - Bug Fix: profile item counts were being incremented once too often
+
+Version 1.0.4
+ - Bug Fix: artists and users now imported seperately, other bug fixes
+
+Version 1.0.3
+ - Bug Fix: import images now works when JR4 site is in maintenence mode
+
+Version 1.0.2:
+ - Adding new Changelog
+
+Version 1.0.0:
+ - Initial release

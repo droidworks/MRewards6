@@ -1,0 +1,49 @@
+/*
+ * Jamroom 5 PhotoPro CSS
+ * Copyright 2003-2011 by Talldude Networks, LLC.
+ * @author Brian Johnson - brian@talldude.net
+ */
+
+/* @title Rank */
+/* @help This is the ranking number */
+.rank {
+	font-weight:bold;
+	font-size:12px;
+    padding:3px;
+    color:#000;
+}
+
+/* @title Normal */
+/* @help This is the regular body text */
+.normal {
+	font-size:12px;
+    color:#EDEDED;
+    text-shadow: 0;
+}
+/* @title Hilited */
+/* @help This is the hilite text */
+.hilite {
+	font-size:12px;
+	font-weight:bold;
+    color:#1D9B1D;
+}
+/* @title Media Title */
+/* @help This is the Media Title text. */
+.media_title {
+	text-transform:capitalize;
+	font-size:12px;
+	font-weight:bold;
+    color:#EDEDED;
+}
+/* @title Media Title Link */
+/* @help This is the Media Title link text */
+.media_title a {
+    color:#EDEDED;
+    text-decoration:none;
+}
+/* @title Media Title Hover */
+/* @help This is the Media Title hover text */
+.media_title a:hover {
+    color: #FFF;
+    text-decoration:underline;
+}

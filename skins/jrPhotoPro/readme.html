@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+    <title>jrPhotoPro Skin Notes</title>
+
+    <link rel="stylesheet" type="text/css" href="css/core_grid.css">
+    <link rel="stylesheet" type="text/css" href="css/core_image.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile_core.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style type="text/css" media="screen"><!--
+    body { font-family:Tahoma,Verdana,Helvetica,Arial,sans-serif; background: #000; padding: 0;color:#EDEDED; }
+    .wrapper { margin: 8px; padding: 8px; background: #333; border:1px solid #666; }
+    p { font-size: 14px }
+    h3 { font-size: 28px }
+    h4 { font-size: 19px; background-color: #666; color: #EDEDED; padding: 4px; border: 1px solid #FFF; }
+    ul { font-size: 13px }
+    b { color: #1D9B1D;}
+    a { color: #EDEDED;text-decoration:none;font-style:italic;font-size: 12px; }
+    a:hover { color:#FFF; text-decoration: underline; }
+    .notice {margin:15px 40px 15px 40px; padding:10px; border:2px dashed #666666;}
+    --></style>
+
+</head>
+
+<body>
+<div class="wrapper">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col12 last">
+
+                <div align="center">
+                    <img src="img/logo.png" class="img_scale" style="max-width:236px;max-height:55px;" alt="PhotoPro Logo"><br>
+                    <h1>Jamroom PhotoPro Skin Settings.</h1><br>
+                    <br>
+                    <div style="text-align: left;padding:5px;margin:10px;">
+                        <b>Table Of Content:</b><br>
+                        <a href="#installation">Installation</a><br>
+                        <a href="#branding">Site Branding</a><br>
+                        <a href="#skin_settings">PhotoPro Settings (skins/jrPhotoPro/config.php file)</a><br>
+                        <a href="#slider_quota">Slider Quota ID's</a><br>
+                        <a href="#slider_carousel">Slider Image ID's</a><br>
+                        <a href="#featured_gallery">Featured Gallery</a><br>
+                        <a href="#site_ads">Site Ads/Google Ads</a><br>
+                        <a href="#require_images">Require Images</a><br>
+                        <a href="#hide_tag_cloud">Hide Tag Cloud</a><br>
+                        <a href="#flickrfeed">Flickr Feed</a><br>
+                        <a href="#language_files">Language Files</a><br>
+                        <a href="#requirements">Requirements</a><br>
+                        <a href="#support">Support</a><br>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col12 last">
+
+                <a id="installation" name="installation"></a>
+                <p>Thank you for purchasing and using Jamroom 5 and the <b>PhotoPro</b> skin.</p>
+                <p>If you've installed Jamroom 5, or had Jamroom 5 installed by a Jamroom 5 staff, for the first time, the <b>jrPhotoPro</b> skin will not be the default skin. This skin can be activated via the skins info tab.</p>
+                <p>Or if you prefer not to install the Jamroom 5 PhotoPro skin yourself, we have a guaranteed installation service available, visit us for more info: <a href="http://www.jamroom.net" target="_blank">http://www.jamroom.net</a> for more info.</p>
+                <p></p>
+
+
+
+                <h4>Skin Activation:</h4>
+                <p>To activate the <b>PhotoPro</b> skin for your Jamroom5 Install, after uploading the skin to your skins directory with a FTP program or via the marketplace, log-in as the site admin and click the <b>Skins</b> tab, then click on the <b>PhotoPro</b> skin from the menu entry, then from the Info tab section check the "Set As Active Skin" checkbox and click the save button.</p>
+
+
+                <br>
+
+
+                <a id="branding" name="branding"></a>
+                <h4>Site branding:</h4>
+                <p>Simply edit or replace the following files to change the branding of your site.</p>
+                <ul>
+                    <li>Main Header Logo (site wide | width: 236px height: 55px) - <b>skins/jrPhotoPro/img/logo.png</b></li>
+                    <li>Footer Information - <b>skins/jrPhotoPro/footer.tpl</b></li>
+                </ul>
+                <p class="notice"><b>Note:</b> You may also modify skin template via the "Templates" tab in the admin skins section of the control panel.</p>
+
+                <br>
+
+
+                <a id="skin_settings" name="skin_settings"></a>
+                <h4>PhotoPro Settings (skins/jrPhotoPro/config.php file):</h4>
+                <p><b>PhotoPro</b> has a couple of configuration settings, as admin you will see a link in the ACP drop down menu which links to the PhotoPro Skin Settings page in your admin.</p>
+                <div align="center">
+                    <img src="img/photopro_settings.png" class="img_scale" style="max-width:456px;max-height:204px;">
+                </div>
+                <p class="notice"><b>Note:</b> Please take your time to view the PhotoPro Settings and descriptions.</p>
+
+
+                <br>
+
+
+                <a id="slider_quota" name="slider_quota"></a>
+                <h4>Slider Quota ID's:</h4>
+                <p>You can choose which of your quotas will be allowed to show in the Slider/Carousel.
+                    You can manually select which Quotas wil be allowed show in the slider by adding the Quota ID(s) separated by a comma ( ie. 1,2,3 etc. ) in the Image Quota(s) field of the <b>PhotoPro Settings</b>.
+                </p>
+                <div align="center">
+                    <img src="img/image_slider_quota.png" class="img_scale" style="max-width:408px;max-height:160px;">
+                </div>
+                <p class="notice"><b>Note:</b> If you leave this field blank, the Slider will show images from all quotas.</p>
+                <br>
+
+
+                <br>
+
+
+                <a id="slider_carousel" name="slider_carousel"></a>
+                <h4>Slider Image ID's:</h4>
+                <p>You can manually select which Gallery Images to show in the slider by adding the Gallery Photo ID separated by a comma ( ie. 1,2,3 etc. ) in the Image ID(s) field of the <b>PhotoPro Settings</b>.</p>
+                <p class="notice"><b>Note:</b> If you leave this field blank, the Slider will random images.</p>
+                <div align="center">
+                    <img src="img/image_slider_ids.png" class="img_scale" style="max-width:408px;max-height:160px;">
+                </div>
+                <br>
+                <b>Features:</b><br>
+                <ul>
+                    <li>Responsive</li>
+                    <li>Swipe scroll enabled. (For Mobile Devices)</li>
+                    <li>Mouse scroll enabled. (For PC)</li>
+                    <li>Hiding navigation arrows for both the slider and carousel.</li>
+                    <li>Image Slider and Carousel are synced together.</li>
+                </ul>
+
+
+
+                <br>
+
+
+                <a id="featured_gallery" name="featured_gallery"></a>
+                <h4>Featured Gallery:</h4>
+                <p>Enter the Gallery Title you want to show in the Featured Gallery image slider.</p>
+                <div align="center">
+                    <img src="img/image_slider.png" class="img_scale" style="max-width:408px;max-height:160px;">
+                </div>
+                <p class="notice"><b>Note:</b> If this field is left blank the image slider will show all Galleries.</p>
+
+
+                <br>
+
+
+                <a id="site_ads" name="site_ads"></a>
+                <h4>Site Ads/Google Ads:</h4>
+                <p>Google Ads have been configured throughout the templates, your Google Ads code for ALL ads needs to be set in <b>PhotoPro Settings</b>.</p>
+                <p>If you prefer to use the two ad fields, set the Google Ads to <b>NO</b> in <b>PhotoPro Settings</b>. Check the <b>Site Ads</b> check box to hide all ads on the site.</p>
+                <div align="center">
+                    <img src="img/ads.png" class="img_scale" style="max-width:494px;max-height:516px;" alt="PhotoPro Settings">
+                </div>
+                <p class="notice"><b>Note:</b> As of now, the Jamroom 5 does NOT have an Ad Manager Module.</p>
+
+
+                <br>
+
+
+                <a id="require_images" name="require_images"></a>
+                <h4>Require Images:</h4>
+                <p>If you prefer to not show images or profiles that have not uploaded an image, even though an entry was created, check this setting and only entries/profiles with images will show.</p>
+                <div align="center">
+                    <img src="img/require_images.png" class="img_scale" style="max-width:408px;max-height:160px;" alt="PhotoPro Settings">
+                </div>
+
+
+                <br>
+
+
+                <a id="hide_tag_cloud" name="hide_tag_cloud"></a>
+                <h4>Hide Tag Cloud:</h4>
+                <p>If you prefer to not show the tag cloud on your index page, check this setting and tag cloud on the index page will be hidden.</p>
+                <div align="center">
+                    <img src="img/hide_tag_cloud.png" class="img_scale" style="max-width:408px;max-height:160px;" alt="PhotoPro Settings">
+                </div>
+                <p class="notice"><b>Note:</b> This will not hide the tag cloud on the profile pages.</p>
+
+
+                <br>
+
+
+                <a id="flickrfeed" name="flickrfeed"></a>
+                <h4>Flickr Feed:</h4>
+                <p><b>jrPhotoPro</b> is setup to display a Flickr Feed. To show this feed, you'll need to have the jrFeed module installed and activated.</p>
+                <div align="center">
+                    <img src="img/feed_mod.png" class="img_scale" style="max-width:408px;max-height:376px;" alt="PhotoPro Settings">
+                </div>
+                <p>In the tools section of the Feed module, click the create/update feed button</p>
+                <div align="center">
+                    <img src="img/feed_create.png" class="img_scale" style="max-width:408px;max-height:160px;" alt="PhotoPro Settings">
+                </div>
+                <p>Then add the following to the feed name and feed url fields.</p>
+                <ul>
+                    <li>Feed Name: flickr_feed</li>
+                    <li>Feed URL: https://api.flickr.com/services/feeds/photos_public.gne?format=rss2</li>
+                </ul>
+                <div align="center">
+                    <img src="img/feed_create2.png" class="img_scale" style="max-width:408px;max-height:160px;" alt="PhotoPro Settings">
+                </div>
+                <p>Then click the Create button.</p>
+
+                <p class="notice"><b>Note:</b> If the Feed module is not active, then the site will show recent comments. If the Feed module is active and you have <b>not</b> created the Flickr Feed as described above, then the feed will show Jamroom's Facebook feed.</p>
+
+
+                <br>
+
+
+                <a id="language_files" name="language_files"></a>
+                <h4>Language Files:</h4>
+                <p>Although the <b>jrPhotoPro</b> skin is not setup for multiple languages, it can be configured for Jamroom's multilingual system which allows the site language to be quickly changed by clicking on a flag image.
+                    If you wish to use an additional language for your site you can do so by translating from the existing language file which is located in the <b>"skins/jrPhotoPro/lang/"</b> directory.
+                    Once you have completed the translation, save the file as <b>xx-XX.php</b> with "xx" being your countries suffix in lower case and XX being your countries suffix in upper case.
+                    You will then need to edit the file <b>skins/jrPhotoPro/header.tpl</b>, or the template where you would like to place the link to change the language, and add the following line:</p>
+                <p><label>
+                    <textarea style="background-color:#000; border:1px solid #282828; color:#CCC; width: 450px;"><a href="?set_user_language=xx-XX"><img src="/skins/jrPhotoPro/img/flags/xx.png" alt="XX" title="LANGUAGE"></a></textarea>
+                </label></p>
+
+                <p>Again changing <b>xx-XX</b> and <b>xx.png</b> to your countries suffix in lower case and upper case. Also change LANGUAGE to the new language, ie. Spanish etc...</p>
+
+                <br>
+
+
+                <a id="requirements" name="requirements"></a>
+                <h4>Requirements:</h4>
+                <b>Required:</b><br>
+                <ul>
+                    <li>Jamroom Core v5.x.x</li>
+                    <li>jrAction Module v1.x.x</li>
+                </ul>
+                <b>Minimum:</b><br>
+                <ul>
+                    <li>jrBlog Module v1.x.x</li>
+                    <li>jrGallery Module v1.x.x</li>
+                    <li>jrFlickr Module v1.x.x</li>
+                </ul>
+                <b>Optional:</b><br>
+                <ul>
+                    <li>jrTags Module v1.x.x</li>
+                    <li>jrFeed Module v1.x.x</li>
+                </ul>
+                <br>
+
+                <a id="support" name="support"></a>
+                <h4>Support:</h4>
+                <p>If you have any support questions or require assistance please use the <a href="https://www.jamroom.net/the-jamroom-network/forum">Support Forum</a>.</p>
+                <p>Thanks Again For Your Purchase And Your Support!.<br>- The Jamroom Network Team</p>
+
+                <br>
+                <br>
+                <br>
+
+                <div align="center">
+                    <p>Copyright &copy;2013 <a href="http://www.jamroom.net">Jamroom Network Design</a></p>
+                    <p><small>Jamroom is Copyright &copy;2003 TallDude Networks, all rights reserved.</small></p>
+                    <p></p>
+                    <p></p>
+                    <p><a onclick="window.close(this)" style="cursor:pointer;">Close [X]</a> </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+User Polls module changelog
+
+Version 1.0.15:
+ - New: Added item_detail_meta.tpl for the Meta Tag Manager module to support custom meta tags
+
+Version 1.0.14:
+ - New: Reset System listener added to clear all poll database tables
+ - Change: Polls that are shared to Facebook now include an icon if missing a poll image
+
+Version 1.0.13:
+ - Bug Fix: Editor form fields were not being tested for banned words
+
+Version 1.0.12:
+ - Change: Updated to work properly with new Editor Embedded Media module
+
+Version 1.0.11:
+ - Change: Updated to work properly with new Editor Embedded Media module
+
+Version 1.0.10:
+ - New: Global Config setting to allow the results to show before the user has voted.
+
+Version 1.0.9:
+ - Change: "Poll Option Count" can now be changed even if the Poll has already started
+ - Change: "Delete This Option" is now available even if the Poll has already started
+
+Version 1.0.8:
+ - Bug Fix: Embedding polls required jrUpimg to be active to embed polls. Fixed.
+
+Version 1.0.7:
+ - New: Search and browsing added to the Editor Embedded Media tab
+ - New: Search box on index page to search only polls
+
+Version 1.0.6:
+ - Bug Fix: Poll Option fields were not being excluded from the Form Designer
+ - Bug Fix: Invalid Quota Option text for enabling polls for a Quota
+
+Version 1.0.5:
+ - Change: Embed template has been renamed to "item_embed.tpl"
+
+Version 1.0.4:
+ - New: Poll Support added to the Embedded Media module
+ - New: added the tinymce editor to the polls description section.
+ - New: Form Designer support added.
+ - Change: updated jrEmbed system to work with tinymce v4
+
+Version 1.0.3:
+ - Bug Fix: "update" and "vote" views were not properly registered for timeline/actions support
+
+Version 1.0.2:
+ - Bug Fix: After voting, poll refresh is not showing counted vote for non-logged in users
+
+Version 1.0.1
+ - Bug Fix: Quota options for creating/voting in polls were not working properly
+ - Change: IP address as well as user_id are both used to check if a user has previously voted
+
+Version 1.0.0:
+ - Initial Release

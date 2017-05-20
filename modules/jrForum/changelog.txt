@@ -1,0 +1,337 @@
+Profile Forum module change log
+
+Version 2.1.5:
+ - New: Search box added to individual forum activity list
+ - Change: Configuration pagination settings now text boxes so any numeric value can be entered
+ - Bug Fix: Mark all as read button link not correct URL on the Newest Posts page
+
+Version 2.1.4:
+ - Change: Updated item_index.tpl so User image size looks better on HiDPI displays
+ - Bug Fix: "Post Sort Direction" set to "Newest Post First" linking to the wrong page from category index
+
+Version 2.1.3:
+ - Bug Fix: Category counts may not be corrected during Integrity Check in some instances
+ - Bug Fix: "Post Sort Direction" set to "Newest Post First" may result in bad topic URL in notification
+
+Version 2.1.2:
+ - Change: Forum module no longer requires the Timeline module (was always optional)
+
+Version 2.1.1:
+ - Bug Fix: Edit and Delete buttons may not show on topic if "Enable Edit Protection" is not enabled
+
+Version 2.1.0:
+ - New: Forum Search uses full text index sarch from Search module if Search module is enabled
+ - New: "Enable Edit Protection" Global Config option to lock edit and delete functions after 24 hours
+ - Change: Admin and Profile Owners can now post a followup message to a locked topic
+ - Change: "Add To Timeline" option will now show for users posting in forums off their home profile
+ - Bug Fix: Added missing language strings for User Settings section
+
+Version 2.0.11:
+ - Bug Fix: File Attachment button may not show in create/update form for some users
+ - Bug Fix: Forum Category Note may be incorrect if multiple categories are named the same
+
+Version 2.0.10:
+ - New: Added item_detail_meta.tpl for the Meta Tag Manager module to support custom meta tags
+ - Bug Fix: Admin users not able to share to timeline new forum post when forum is not on their home profile
+
+Version 2.0.9:
+ - Bug Fix: Timeline title for responses showing title url, not title
+
+Version 2.0.8:
+ - Bug Fix: "Pinned" checkbox not showing to profile owners on Create Topic form
+
+Version 2.0.7:
+ - New: Reset System listener added to clear all forum database tables
+ - Change: Adding an icon for forum posts shared to facebook
+ - Change: Updated custom search results function to be faster on large forums
+ - Change: Updated post quote system to have better formatting
+
+Version 2.0.6:
+ - New: Configuration setting for topic post 'oldest/newest first'
+
+Version 2.0.5:
+ - Bug Fix: Submitting forum posts could fail to clear the previous posts text and leave the post button disabled
+
+Version 2.0.4:
+ - Bug Fix: Quoting not working in the forums when editor is enabled
+
+Version 2.0.3:
+ - Bug Fix: Disabling attachments for a quota can still show the file attachment button
+
+Version 2.0.2:
+ - Change: Mobile phone users will see a textarea instead of editor if Editor is enabled
+
+Version 2.0.1:
+  - New: RSS Feed for individual forums added at /feed/forum/(profile name)
+  - Change: RSS Feed changed to just feed new topics
+
+Version 2.0.0:
+ - New: [s] strikethrough tag added to BBCode help display
+ - Change: BBCode support has been moved to Jamroom Core version 6.0.0
+ - Change: Quoting now pulls the quotes text from the server instead of the template
+ - Change: Following toggle in topic list no longer shows popup success message
+ - Bug Fix: RSS Feeds from forums may not show correct title for thread replies
+ - Bug Fix: Embedded code with code blocks could break out of code container
+ - Bug Fix: Extra newlines were being added after [quote] and [code] BBCode tags
+ - Bug Fix: A Topic could be deleted with an in-progress response, resulting in a bad entry
+ - Bug Fix: Link to forum topic in the item_list template incorrect
+ - Bug Fix: Incorrect url for Tag links to tagged forum posts
+ - Bug Fix: A post could be posted to a topic after it was locked in some cases
+
+Version 1.8.9:
+ - Bug Fix: Possible Fatal PHP "string offset" error when performing a global forum search
+
+Version 1.8.8:
+ - Bug Fix: "corrected user information" message in Activity Log after integrity check could be wrong
+ - Bug Fix: Forum topics from private profiles could appear in search results for logged out users
+
+Version 1.8.7:
+ - Bug Fix: Topics with only numbers for a title not working if forum categories are disabled
+ - Bug Fix: Watched Topic entry may not be created correctly for a user creating a new topic
+ - Bug Fix: "Allow Private Profiles" setting blocking profile owner from posting if enabled
+
+Version 1.8.6:
+ - Bug Fix: Possible 'data too long' error in the debug log for 'cat_update_user'
+
+Version 1.8.5:
+ - Bug Fix: Allowed File Types global config setting was not being applied to follow up posts
+ - Bug Fix: Last Update User info is incorrect if user is deleted from system
+ - Bug Fix: Possible SQL error when saving forum settings if no default category has been selected
+
+Version 1.8.4:
+ - New: Updated to work properly with the Change Owner module
+ - Bug Fix: Updating an existing forum topic may show a cached version of the topic
+
+Version 1.8.3:
+ - Bug Fix: [Security] able to embed code in comments using quote function if editor enabled
+ - Bug Fix: Newlines being lost when quoting another post with the Editor enabled
+ - Bug Fix: Fix for possible SQL Duplicate error when updating user topic view times
+ - Bug Fix: URL to topic in search results not using the correct profile_url
+
+Version 1.8.2:
+ - Bug Fix: Possible SQL Error from integrity check worker when validating topic counts
+
+Version 1.8.1:
+ - New: Integrity Check worker to validate Forum Category topic counts
+ - Change: Category Description updated to allow up to 1024 characters (up from 256)
+
+Version 1.8.0:
+ - New: Forum category topic count validation on Integrity Check
+ - New: Follow category button allows users to receive notification of new topics in a category
+ - New: Editor added to Category Note section to allow images and media for category head sections
+ - New: Added 60, 90, 120, 180 and 365 day topic auto-close options
+ - Change: Page Title not being set correctly when viewing a user's forum activity page
+ - Change: Javascript to hide show editing buttons changed to more stable code
+ - Change: The quote button, while the editor active in the forum now preserves formatting of quoted material
+ - Change: Create and Modify Forum Topic now allows for multiple file attachments
+ - Change: Attach File button moved to the right of the topic followup text box
+ - Change: Validate Forum DataStore moved to Queue worker during Integrity Check
+ - Change: Removing profile name from Facebook metatags in shared title
+ - Bug Fix: Category updated by user info may not be correct when deleting latest topics
+ - Bug Fix: Entering a category description longer than 256 characters causing SQL error
+ - Bug Fix: Next Page button showing if topic pagination enabled and Core "optimize pager" enabled
+ - Bug Fix: Admin users posting on another profile forum with 'Add to Timeline' not appearing on home timeline
+ - Bug Fix: [url] BBCode tag putting a line break after the URL
+
+Version 1.7.0
+ - New: "Follower Notification" Global Config option to set notification rate for topic emails
+ - Bug Fix: Notifications may not be sent to all users who are following a forum topic
+
+Version 1.6.2
+ - Bug Fix: Link to topic response not being included in Topic Updated email
+
+Version 1.6.1
+ - Bug Fix: Forum pagination navigation would show even if there was only 1 page of results
+
+Version 1.6.0
+ - New: New "inline" method for attaching files to forum posts
+ - Bug Fix: "forum_topic_url" parameter wasn't being formed correctly on forum searches
+ - Bug Fix: Forum Updated email URLs not redirecting to proper page if pagination enabled
+
+Version 1.5.6:
+ - New: Support added for {jrProfile_disable_sidebar} in templates (as well as header/footer)
+
+Version 1.5.5:
+ - New: "justify" and "img" BBCode tag support added
+ - Bug Fix: URL BBCode tags with mixed case open/close tags not being replaced
+ - Bug Fix: "Invalid Value" error when posting new topics
+
+Version 1.5.4:
+ - Bug Fix: form field order in create / update Forum Post form could be incorrect
+
+Version 1.5.3:
+ - New: Invalid keys from imported forum posts now cleaned up during Integrity Check
+ - Bug Fix: Timeline entry may contain incorrect profile_url for created posts
+
+Version 1.5.2:
+ - New: Active Guest count shown in the Forum users that are currently active section
+ - Change: Clicking on Post Count in forum index now jumps to last page if paginated
+ - Change: Forum pages now use standard core provider list pager template
+ - Bug Fix: Topic Post count could be incorrect if Topic Pagination is enabled
+
+Version 1.5.1:
+ - New: "forum_signature" CSS class for controlling style of signature area in a post
+ - Change: Return from editing a post will now return you to the same page you were on
+ - Bug Fix: Page Title not being set correctly for topics when page number > 1
+ - Bug Fix: item_action.tpl could use wrong profile_url in link to topic
+
+Version 1.5.0:
+ - New: "Category Note" in category settings for creating a custom "header note" in a category
+ - New: "Allow Signature" Quota setting to allow users to have a Forum Signature
+ - New: "Allow BBCode Signature" Quota setting to allow BBCode in user signatures
+ - New: "BBCode Help" slide down on new post form
+ - Change: Category included (if enabled) in "newest posts" and "my posts" listings
+ - Bug Fix: "Locked" and "Pinned" topic options not showing for non-admin profile owners
+ - Bug Fix: WYSIWYG Editor may not show on topic refresh
+ - Bug Fix: Updated user_name and profile_url values not changing if profile / user info changed
+
+Version 1.4.5:
+ - Bug Fix: og:description meta tag value not always being entity encoded correctly
+ - Bug Fix: HTML embedded in forum post could mess up layout if imbalanced
+
+Version 1.4.4:
+ - New: Support for ShareThis, Item Tags and other module Item Detail Features on posts
+
+Version 1.4.3:
+ - Bug Fix: white screen when updating a post by a user without quota access to own forum
+ - Bug Fix: Forum Category option could show in Update Post when it should only show on Topic post
+
+Version 1.4.2:
+ - New: "Allowed File Types" setting can now be set in Global Config
+ - Bug Fix: Removed "New Post" button from "Newest Posts" listing - does not work on that view
+ - Bug Fix: New post highlighting was not working correctly in the "Newest Posts" section
+ - Bug Fix: Category count could be incorrect on merge of 2 forum categories
+
+Version 1.4.1:
+ - New: When using the editor and pressing the Quota button, browser is scrolled to editor
+ - New: Form Designer option added for Modify forum post
+ - Change: Removed extra paragraph spacing from Quoted sections when using editor
+ - Bug Fix: Quoting post from a user name longer than 1 word may not format correctly
+ - Bug Fix: "help" text for "Locked" checkbox on Modify Topic form was incorrect
+
+Version 1.4.0:
+ - New: Global Config WYSIWYG Editor option for creating, updating and posting followup entries
+ - New: Global Config option to add forum posts to a users timeline
+
+Version 1.3.3:
+ - Bug Fix: "Mark All Read" not working properly from "New Posts" or "My Posts" listings
+
+Version 1.3.2:
+ - New: Optional 'Add to timeline' when posting replies to topics
+ - Bug Fix: Templates using incorrect variables could result in a Page Not Found
+
+Version 1.3.1:
+ - New: The "Create New Topic" form has been updated with Form Designer support
+ - Bug Fix: Templates using incorrect variables could result in a Page Not Found
+
+Version 1.3.0:
+ - New: "newest posts" section to keep up with latest posts
+ - Bug Fix: "follow this topic" button not highlighting after clicked
+ - Bug Fix: deleting last post in category not updating index user image to previous poster
+ - Bug Fix: New Post highlighting sometimes not working correctly across different profile forums
+ - Change: profile_id is now passed into create/update topic to ensure posted to correct forum
+ - Change: New BBCode parser plugins
+
+Version 1.2.16:
+ - Bug Fix: Category last updated user info not being updated when last category post is deleted
+ - Bug Fix: Fix for incorrect error result function used on a couple views
+ - Bug Fix: Rare SQL error when updating an existing forum topic
+
+Version 1.2.15:
+ - Bug Fix: Moving a topic between forum categories might not update updated user on forum index
+ - New: in search results the forum category is now shown to the right of the updated user
+
+Version 1.2.14:
+ - Bug Fix: Search while in My Posts tab may return no results
+ - Bug Fix: changing profiles while posting a topic response does not post to correct profile
+
+Version 1.2.13:
+ - Change: Global site search will now search forum topic titles and text
+
+Version 1.2.12:
+ - Change: activity.tpl and item_detail.top updated to use lightbox2 instead of lightbox
+
+Version 1.2.11:
+ - Bug Fix: Syntax Hilighting not displaying on some code posts for non-logged in users
+
+Version 1.2.10:
+ - Bug Fix: [code] block being stripped of HTML content if [code] is first thing in the post
+
+Version 1.2.9:
+ - Bug Fix: New Topic button showing on My Posts would not post correctly when using categories
+
+Version 1.2.8:
+ - Bug Fix: (regression) quote BBCode not working properly with named quote
+
+Version 1.2.7:
+ - Bug Fix: code blocks with non UTF-8 characters causing code block to not show
+ - Change: [code] and [quote] BBCode block parsers now check for open/close tag balance
+
+Version 1.2.6:
+ - Bug Fix: viewed topics were not being marked as read in "My Posts" section
+
+Version 1.2.5:
+ - Bug Fix: "No Solution" background color could not be changed. Moved the style to the css file.
+
+Version 1.2.4:
+ - Change: "My Posts" now lists all topics the viewer has posted a reply to
+ - Bug Fix: "My Posts" tag missing from title in header when viewing My Posts
+
+Version 1.2.3:
+ - Bug Fix: CRI Query Error when modifying a category via Modify Category
+
+Version 1.2.2:
+ - Bug Fix: hitting enter caused the form to submit in locations with one text field only.
+
+Version 1.2.1:
+ - Bug Fix: URL to forum post in Activity Section may go to wrong profile
+
+Version 1.2.0:
+ - New: My Posts section that lists topics created by the viewing user
+ - New: Activity section to view forum activity by individual users
+
+Version 1.1.8:
+ - New: All new "solutions" setup for marking topics as solved with configurable solutions
+ - Bug Fix: deleting first topic in a category was not updating the category header with previous topic info
+
+Version 1.1.7:
+ - Bug Fix: Modify/Delete buttons not showing for profile owner or admins on a post that was locked
+
+Version 1.1.6:
+ - Bug Fix: new post and mark topics read buttons do not show on system level index if using categories
+ - Bug Fix: bad profile_id variable in users online template function call for forums not using categories
+
+Version 1.1.5:
+ - Template updates to support new Item Action Buttons
+ - Change: BBCode [code] blocks now line wrap instead of using a scroll bar
+
+Version 1.1.4:
+ - Active forum users section now shows loading indicator while it is working
+ - Page Jumper added for index/category views
+
+Version 1.1.3:
+ - When an admin modifies a post they did not create, the "updated" time stamp will no longer show the user having updated it
+
+Version 1.1.2:
+ - Bug Fix: Moving a topic between categories was not updating view cache for users
+ - Bug Fix: Follow Topic is now working for users with only forum post quota access
+
+Version 1.1.1:
+ - New "Topics per Index Page" global config setting to set number of topics per index page.
+
+Version 1.1.0:
+ - New Forum Categories including read-only categories and category management tools.
+ - New {jrForum_active_users} template function to display active forum users.
+ - Quota support is now 2 options: "Allow Profile Forum" and "Can Post to Forums" for better control over access.
+ - New BBCode support for: bold, center, code, italic, list, quote, underline and url.
+ - Image attachments now show in a Lightbox instead of prompting for download
+ - Removed 'Private Post' option - was not working and was not able to work properly without serious performance impact
+ - Topics will no longer be added to watch list if notifications or topic updates are not turned on in User Notifications
+ - Bug Fix: Post would still show unread sometimes even after reading
+ - Bug Fix: New Posts were not showing as unread if not viewed
+ - Bug Fix: "Update by" would still show last post even if deleted
+ - Bug Fix: "Mark All Topics Read" was not properly updating the topics and some would still show as unread
+ - Adding new Changelog
+
+Version 1.0.0:
+ - Initial Release

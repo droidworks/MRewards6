@@ -1,0 +1,83 @@
+Lucid Skin changelog
+
+Version 1.1.12:
+ - Change: Added more padding to the top of the mobile side menu. modified core_slidebar.css
+
+Version 1.1.11:
+ - Bug Fix: Mobile menu had inconsistent behavior
+
+Version 1.1.10:
+ - Change: Mobile CSS fixes
+
+Version 1.1.9:
+ - Change: CSS and profile layout improvements.
+
+Version 1.1.8:
+ - Change: CSS and profile layout improvements.
+ - New: Added welcome screen and help tab to ACP menu.
+ - Change: Updated social links.
+
+Version 1.1.7:
+ - Change: Added check for tablet so mobile menu shows. Modified templates: header.tpl, header_menu_mobile.tpl and footer.tpl
+
+
+Version 1.1.6:
+ - Bug Fix: Missing template for blog list on front page
+
+Version 1.1.5:
+ - Change: Fixed padding for chat by line that overlapped the chat text.
+
+Version 1.1.4:
+ - New: Added chat CSS file for the new chat module.
+ - New: Added page scroll to top. Templates modified:jrNewLucid.js, mobile_core.css, footer.css and footer.tpl
+ - Change: profile_menu.tpl adjusted to match module version to allow for System Tips to work
+
+Version 1.1.3:
+ - Change: Updated CSS files to fix attach file button.
+ - New: Added YouTube and Pinterest social links and images to the footer template.
+
+Version 1.1.2:
+ - Bug Fix: Wrong skin name in language string settings
+
+Version 1.1.1:
+ - Change: menu order css now lines up with html order (now works the same as other skins)
+
+Version 1.1.0:
+ - Change: Small CSS update to make buttons and select elements in form titles line up better
+ - Change: "Dashboard" link is now part of the ACP for master users
+ - Change: "Search" has been replaced with a small search icon, plus new Cart and Search icons
+ - Change: profile templates updates to support {jrProfile_disable_header} and {jrProfile_disable_sidebar}
+
+Version 1.0.6:
+ - Bug Fix: Fixed URL for Google link in the footer.tpl
+
+Version 1.0.5:
+ - New: Added social icons to the footer
+
+Version 1.0.4:
+ - Bug Fix: Fixed the menu button to be on the same line as the logo image and still work on mobile devices.
+
+Version 1.0.3:
+ - Change: Updated slide menu to new version
+ - Change: Moved logo down on mobile view
+ - Template Files Modified:
+   ------------------------------------------------------
+    header.tpl          footer.tpl
+   ------------------------------------------------------
+ - New Version of Javascript file:
+   ------------------------------------------------------
+    contrib/slidebars/slidebars.min.js
+   ------------------------------------------------------
+
+Version 1.0.2:
+ - New: Profile custom logo support
+ - Template Files Modified:
+   ------------------------------------------------------
+    header.tpl
+   ------------------------------------------------------
+
+Version 1.0.1:
+ - Bug Fix: Fixed recently rated box on the profile page
+
+Version 1.0.0:
+ - Initial Release

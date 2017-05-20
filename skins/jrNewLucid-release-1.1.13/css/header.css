@@ -1,0 +1,80 @@
+/* @title Header */
+/* @help This is the main header section for the site */
+#header {
+    background-image: linear-gradient(#444, #222);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+    height: 118px;
+    margin-bottom: 12px;
+    position: fixed;
+    width: 100%;
+    color: #ffe497;
+    z-index: 290;
+}
+
+/* @title Header Links */
+/* @help Header text URL */
+#header a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #00ab6b;
+}
+
+/* @title Header Link Hover */
+/* @help Header text URL hover */
+#header a:hover {
+    text-decoration: underline;
+}
+
+#header_content {
+    height: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main_logo {
+    float: left;
+    vertical-align: middle;
+    padding: 6px;
+    cursor: pointer;
+}
+
+/* @title Main Menu */
+/* @help Main Menu */
+#main_menu {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    font-size: 16px;
+    padding-right: 12px;
+}
+
+/* @title Banner */
+/* @help This is the main banner section above the header for the site */
+.banner {
+    background-color: transparent;
+    background-image: url('{$jrNewLucid_img_url}/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left:0;
+    right:0;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+.spacer {
+    padding-top: 60px;
+}
+
+#add_to_cart_success {
+    float: left;
+    position: absolute;
+    margin: 0 auto;
+    background-color: #FFCC00;
+    border: 1px solid #999999;
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 3px;
+}

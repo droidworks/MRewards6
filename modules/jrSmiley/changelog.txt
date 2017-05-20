@@ -1,0 +1,66 @@
+Smiley Support module changelog
+
+Version 1.2.3:
+ - Bug Fix: Smiley replacement strings containing a quote (") character not working in chat
+
+Version 1.2.2:
+ - Bug Fix: Some smilies that are the first characters on a new line may not get converted correctly
+
+Version 1.2.1:
+ - Bug Fix: New Categories not showing in Smiley Browser drop down selector until cache reset
+ - Bug Fix: Item Reorder may only show smilies from "default" category
+
+Version 1.2.0:
+ - New: "Reorder" button added to smiley browser to allow ordering of smilies in a category
+ - New: "Category" support added for grouping Smilies into categories
+ - New: Chat browser updated with new smiley categories
+ - New: 220 new default smiley / emoticons that can be added to your site
+ - Change: Smiley text formatter performance improvements
+
+Version 1.1.5:
+ - New: Smiley selector is now available as Quota Option for Simple Chat
+ - Bug Fix: Smiley as last part of text is missing a space before the smiley image
+ - Bug Fix: Smileys with " character in them not working in chat
+
+Version 1.1.4:
+ - Change: Quota Config text updated to better reflect what the settings do
+
+Version 1.1.3:
+ - Bug Fix: Smilies with '(' in the smiley string not being displayed properly
+ - Change: internal function updates to integrate properly with core media functions
+
+Version 1.1.2:
+ - Bug Fix: Improved replacement scanner should prevent unwanted substring replacement in words
+
+version 1.1.1:
+ - Bug Fix: ajax loaded pages were setting the header and footer causing issues with other modules
+
+version 1.1.0:
+ - Change: "Free Size" removed - only height is now set on Smilies allowing for easier image use
+
+Version 1.0.8:
+ - Change: Free Size added to smiley option to allow for non-square smileys
+
+Version 1.0.7:
+ - Bug Fix: Template error when trying to configure Smileys
+
+Version 1.0.6:
+ - Bug Fix: Smiley not working if it was the very first character in a string
+
+Version 1.0.5:
+ - Change: jrSmiley TinyMCE plugin files moved to Smiley module (from System Core)
+
+Version 1.0.4:
+ - Change: Updated to work with Tiny MCE 4
+
+Version 1.0.3:
+ - New: Quota Support added
+
+Version 1.0.2:
+ - New: TinyMCE editor now uses smilies from the jrSmiley module
+
+Version 1.0.1:
+ - Bug Fix: Updated so smiley string must have a space before it before it is converted
+
+Version 1.0.0:
+ - Initial Release

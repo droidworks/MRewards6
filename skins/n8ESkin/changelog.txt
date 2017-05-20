@@ -1,0 +1,30 @@
+ESkin changelog
+
+Version 1.1.7:
+ - Change: css image fixes
+
+Version 1.1.6:
+  - Bug Fix: combined audio and video pages and other small fixes
+
+Version 1.1.5:
+  - Bug Fix: wrapped config search query with module active check
+
+Version 1.1.4:
+ - Bug Fix: wrapped foreach in config file with array test to prevent error
+
+Version 1.1.3:
+ - Change: added accordion behavior to audio and video details pages
+
+Version 1.1.2:
+ - Fix: profile menu repairs
+
+Version 1.1.1:
+	Change: added new player n8Player_playlist_action_player for timeline playlists.
+
+Version 1.1.0:
+ - Upgrade: Added siderbar to module index, details and category/albums for all modules.
+ - Upgrade: profile headers can now be hidden on all module pages
+ - Change: Added list pagebreak setting for dynamic lists
+
+Version 1.0.0:
+ - Change: Initial Release

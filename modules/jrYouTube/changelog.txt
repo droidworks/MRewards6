@@ -1,0 +1,163 @@
+YouTube module changelog
+
+Version 1.5.10:
+ - Bug Fix: Form Designer fields added to the update form would not be populated with the saved info
+
+Version 1.5.9:
+ - Change: System Check updated to do a more thorough check of the configured API credentials
+
+Version 1.5.8:
+ - Change: The jrYouTube_embed smarty function now also accepts 'on/off' as an auto_play option
+
+Version 1.5.7:
+ - Change: YouTube artwork URL now forced to SSL if site is running on SSL
+
+Version 1.5.6:
+ - New: Added item_detail_meta.tpl for the Meta Tag Manager module to support custom meta tags
+
+Version 1.5.5:
+ - Bug Fix: Videos imported during daily maintenance may not create an Activity Timeline entry
+
+Version 1.5.4:
+ - Bug Fix: _user_id being set to "0" for some videos imported to a channel during daily maintenance
+
+Version 1.5.3:
+ - New: item_search.tpl added to allow customization of search result display
+ - Bug Fix: Possible issue with YouTube URL Scan player trying to parse URLs from remote sites
+
+Version 1.5.2:
+ - New: Users can now enter a channel ID in place of a Channel User Name in Profile Settings
+ - Change: Youtube search tool no longer includes channels (could not be imported)
+ - Change: item_action.tpl updated to work better when importing multiple videos via the "Search" tool
+
+Version 1.5.1:
+ - Bug Fix: Removing an existing YouTube Channel name from profile settings was not removing the channel
+ - Bug Fix: "Load on Click" setting could cause issue when player is loaded via the Media URL Scanner module
+
+Version 1.5.0:
+ - New: YouTube v3 API Credentials are tested when added to verify a connection can be made
+ - New: YouTube title and description are displayed for Url Media Scan items
+ - New: Unit tests added to test the validity of youtube ids
+ - New: UrlScan added YouTube videos show a placeholder initially then replace on click to speed up load time
+ - Bug Fix: Embedded player for Media URL Scanner not showing title for Private YouTube videos
+ - Bug Fix: Invalid youtube id's could be imported from youtube
+ - Bug Fix: Multiple embedded YouTube videos with the same ID may not play correctly when clicked
+
+Version 1.4.0
+ - New: Added a quota config setting to turn on/off 'YouTube Search' during create
+ - New: Added a profile account setting to input a YouTube channel to keep in sync with
+ - New: Added a daily maintanence queue worker to fetch newer videos from youtube channels
+ - Change: YouTube data publishedAt now stored along with the other video information
+ - Bug Fix: youtube.be urls youtube ids were not correctly identified on the https url
+
+Version 1.3.2
+ - Bug Fix: Videos deleted on youtube are not being deleted from system on integrity check
+
+Version 1.3.1
+ - Change: javascript for embedding an item in an editor changed to target the editor where the button was clicked.
+
+Version 1.3.0
+ - New: Site Builder widget grid templates added
+ - Change: Search tool updated to show thumbnails for videos - click to play
+ - Change: Search tool updated to use system style pager
+ - Change: Removing profile name from facebook metatags in shared title
+ - Bug Fix: YouTube description was not being shown in the Search tool
+
+Version 1.2.7:
+ - Bug Fix: Custom fields in the create form were not being added to the datastore
+
+Version 1.2.6:
+ - New: Site Builder widget now allows for adding YouTube videos that don't currently exist on someones profile
+ - Change: added support for immediate embed feature of Media URL Scanner
+
+Version 1.2.5:
+ - Bug Fix: removed item_playlist file to avoid playlist button showing when it shouldn't
+
+Version 1.2.4:
+ - Added fullscreen button to iframe player
+
+Version 1.2.3:
+ - New: System Check listener will now check for valid V3 API Key in System Check
+
+Version 1.2.2:
+ - Bug Fix: Valid videos could be removed during nightly maintenance if API does not respond
+ - Bug Fix: Integrity Check could hang on invalid YouTube video
+
+Version 1.2.1:
+ - Bug Fix: "YouTube has changed their API" error showing in YouTube Search
+
+Version 1.2.0:
+ - Change: now uses v3 of the YouTube API. This API requires registration
+
+Version 1.1.1:
+ - Change: added image:width and height to sharethis meta data
+
+Version 1.1.0:
+ - Change: Updated to work properly with new Editor Embedded Media module
+ - Change: Updated to work properly with new Site Builder module
+ - Bug Fix: Player loaded via URL Scan may be really short
+ - Bug Fix: Breadcrumb link in item_detail.tpl may use incorrect URL
+
+Version 1.0.20:
+ - New: Added support for new Combined Video module
+
+Version 1.0.19:
+ - Change: custom ShareThis module template moved from ShareThis module to YouTube module
+
+Version 1.0.18:
+ - New: Tool to import mass YouTube videos to a specified profile
+
+Version 1.0.17:
+ - Change: Width of the player is now 100% of the div, height is aspect ratio 16:9
+
+Version 1.0.16:
+ - New: Search and browsing added to the Editor Embedded Media tab
+ - New: Search box on index page to search only YouTube videos
+
+Version 1.0.15:
+ - Change: module now allows the use of youtube_id="BKorP55Aqvg" to embed videos not in the datastore.
+
+Version 1.0.14:
+ - Change: new "item_embed.tpl" template that works with new Embed module
+
+Version 1.0.13:
+ - Change: Updated to work with Editor Embedded Media module and TinyMCE 4
+ - Bug Fix: Fix for incorrect error result function used on a couple views
+
+Version 1.0.12:
+ - Bug Fix: fix invalid stream count variables
+
+Version 1.0.11:
+ - Change: Support for youtu.be URL added for URL Scanner
+
+Version 1.0.10:
+ - Bug Fix: URL Scan template now properly works under https
+
+Version 1.0.9:
+ - New: Log Entry created for invalid YouTube response on integrity check
+
+Version 1.0.8:
+ - New: Daily maintenance option added to remove invalid YouTube videos
+ - Bug Fix: Search was incorrectly replacing spaces with underscores
+
+Version 1.0.7:
+ - Bug Fix: iframe embed not working when site is on SSL in Search
+ - Change: Default page count set to 5 instead of 10
+
+Version 1.0.6
+ - New: jrPoll and jrUrlScan listeners added/modified
+
+Version 1.0.5:
+ - Template updates to support new Item Action Buttons
+
+Version 1.0.4:
+ - Bug Fix: YouTube videos embedded in https pages were not showing on some browsers
+
+Version 1.0.3:
+ - Bug fixes
+
+Version 1.0.2:
+ - Added action support when creating multiple items via the search form
+
+version 1.0.1:
+ - Adding new Changelog

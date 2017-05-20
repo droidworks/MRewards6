@@ -1,0 +1,13 @@
+Service Shop Module changelog
+
+Version 1.0.3:
+ - Bug Fix: "My Items" FoxyCart view could show "download" for Service Shop purchases
+
+Version 1.0.2:
+ - Change: Updated module icon
+
+Version 1.0.1:
+ - New: Create and Updates forms are now customizable via the Form Designer
+
+Version 1.0.0:
+ - Initial Release

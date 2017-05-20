@@ -1,0 +1,44 @@
+/* @title Text Input */
+/* @help Format for Text Input form elements */
+.form_text {
+    color: #333333;
+    font-size: 14px;
+    width: 75%;
+    padding:4px; /* @ignore */
+    margin: 0 2px; /* @ignore */
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7F7F7F;
+    border-radius: 3px;
+}
+
+/* @title Date Input */
+/* @help Format for Date Input form elements */
+.form_date {
+    color: #333333;
+    font-size: 14px;
+    width: 26%;
+    padding:4px; /* @ignore */
+    margin: 0 2px; /* @ignore */
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7F7F7F;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.form_text[disabled="disabled"], .form_text[readonly="readonly"] {
+    background: #DDDDDD;
+    color: #888888;
+}
+
+.form_text_search {
+    width: 45%;
+}
+
+.live_search_text {
+    color: #CCCCCC;
+    font-style: italic;
+}

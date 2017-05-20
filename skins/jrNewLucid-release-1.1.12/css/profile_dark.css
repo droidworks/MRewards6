@@ -1,0 +1,121 @@
+html {
+    background-color: #222222;
+}
+
+a, div.jqcloud a {
+    color: #ffe497;
+}
+
+section {
+    color: #CCCCCC;
+}
+
+section#profile {
+    background: #222222 none repeat scroll 0 0;
+    box-shadow: 0 0 2px #000000;
+}
+
+#profile_menu {
+    background: #222222 none repeat scroll 0 0;
+}
+
+#horizontal a {
+    color: #EEEEEE;
+}
+
+.menu_banner ul ul {
+    background: #222222 none repeat scroll 0 0;
+    box-shadow: 2px 2px 8px #000000;;
+}
+
+.menu_banner ul#submenu > li {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #222;
+}
+
+#submenu > li:hover a {
+    color: #ffe497;
+}
+
+.title {
+    color: #FFFFFF;
+    background-color: #222222;
+    border-bottom: 1px solid #111111;
+}
+
+.breadcrumbs > a {
+    color: #CCCCCC;
+}
+
+.profile_data span {
+    color: #BBBBBB;
+}
+
+.profile_data {
+    color: #ffe497;
+}
+
+.profile_information, .bio, .followers {
+    border-top: 1px solid #333333;
+}
+
+.border_left {
+    border-left: 1px solid #333333;
+}
+
+.sprite_icon {
+    background-image: linear-gradient(#444444, #333333);
+    border: medium none;
+    box-shadow: 0 0 2px #111111;
+}
+
+.menu_banner.clearfix {
+    border-bottom: 1px solid #333333;
+}
+
+.stat_entry_box {
+    background-image: linear-gradient(#444444, #333333);
+    border: 1px solid #111111;
+    color: #FFFFFF;
+}
+
+.profile_hoverimage .sprite_icon {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.item {
+    border-bottom: 1px solid #111111;
+    border-top: 1px solid #333333;
+    margin: auto;
+}
+
+.tag_name_box {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+.add_to_cart_price {
+    color: #FFFFFF;
+}
+
+#profile .head, .menu_banner.clearfix {
+    border-bottom: 1px solid #111111;
+}
+
+.profile_body .block > .block_content > .block {
+    border-top: 1px solid #333333;
+}
+
+.profile_body {
+    border-top: 1px solid #333333;
+}
+
+select#profile_select_menu {
+     background: #080808 none repeat scroll 0 0;
+     border: 1px solid #333333;
+     color: white;
+ }
+
+.title h1 {
+    color: #FFE497;
+}

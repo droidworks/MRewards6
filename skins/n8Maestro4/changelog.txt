@@ -1,0 +1,30 @@
+Maestro4 changelog
+
+Version 1.0.9:
+ - Change: css image fixes
+
+Version 1.0.8:
+ - Bug Fix: combined audio and video pages
+ - Bug Fix: no_items.tpl was missing
+
+Version 1.0.7:
+ - Bug Fix: removed bad listener
+
+Version 1.0.5: 
+ - CHange: feedback buttons are now visible when not logged in.
+ 
+Version 1.0.4: 
+ - Fix: added missing jrStore_item_action.tpl
+ - Change: removed 'page_conent' class from module indexes
+
+Version 1.0.3:
+ - Change: drop header for groups and site forum
+
+ Version 1.0.2:
+ - Change: removed truncate from profile bio and replaced it with max-height div
+
+Version 1.0.1:
+ - Change: minor css edits
+
+Version 1.0.0:
+ - Change: Initial Release

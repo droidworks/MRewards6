@@ -1,0 +1,78 @@
+Private Notes module changelog
+
+Version 1.4.9:
+ - Change: note_detail.tpl updated to show Profile Image of sending user if no User Image exists
+ - Bug Fix: "Private Note" option showing in Notifications for Private Note received
+
+Version 1.4.8:
+ - New: Reset System listener added to clear all forum database tables
+
+Version 1.4.7:
+ - Bug Fix: Emoji characters not showing correctly in Private Notes
+
+Version 1.4.6:
+ - Bug Fix: ordering of a private note thread not showing in chronological order
+
+Version 1.4.5:
+ - Bug Fix: Username could show incorrectly in Private Note for admin and master users
+ - Bug Fix: Profile name could show incorrectly capitalized in Private Note
+
+Version 1.4.4:
+ - Bug Fix: Checkbox column not showing in inbox (due to Gravatar work in 1.4.3)
+
+Version 1.4.3:
+ - Bug Fix: Updated inbox view to work correctly with Gravatar module
+
+Version 1.4.2:
+ - Bug Fix: Possible CRI SQL error for users with no followers trying to create a new PN
+
+Version 1.4.1:
+ - Change: If a system generated note is created without a subject, it will now show "No Subject"
+
+Version 1.4.0:
+ - New: "Settings" section available from Private Notes inbox
+ - New: "Accept Private Notes" setting to enable/disable accepting Private Notes
+ - New: "Blocked Users" setting to block specific users from sending a user a Private Note
+ - New: "Block User" button when viewing a note to block sender
+
+Version 1.3.1:
+ - New: "Enable Editor" Global Config option to enable WYSIWYG editor in Private Notes
+
+Version 1.3.0:
+ - New: "System User ID" Global Config for setting "from" user id on system notifications
+ - New: "Note Text in Email" Global Config for including the PN Text in the email notification
+ - Change: Removed H3 from subject to make it easier to see what notes have been seen vs. not seen
+ - Bug Fix: Invalid user_id error when viewing a note from the system
+
+Version 1.2.1:
+ - New: After sending a new note the page will refresh to the last note in the thread
+
+Version 1.2.0:
+ - New: View private Note interface updated making it easier to view the Private Message thread
+ - Change: CSS has been labeled for customizing in Skin style editor
+
+Version 1.1.5:
+ - Bug Fix: In rare cases the module's notify user listener could get stuck in a loop
+
+Version 1.1.4:
+ - Bug Fix: Replying to a note the sender had deleted was not making the Private Note visible again
+
+Version 1.1.3:
+ - Bug Fix: unread note count may not decrement if viewing notes from multiple browser tabs
+
+Version 1.1.2:
+ - Bug Fix: creating PN to a user with a name that is a prefix of another user name may fail with invalid user error
+
+Version 1.1.1:
+ - Bug Fix: Skin Menu would sometimes not show that the user had a new note
+ - Bug Fix: Sending a new followup note to a user before they viewed the previous note was not highlighting the thread
+
+Version 1.1.0:
+ - Update to Email templates to include direct URL to new note
+ - Update to leave search for note to user to exclude users that do not have access to Private Notes
+
+Version 1.0.2:
+ - Adding new Changelog
+
+Version 1.0.0:
+ - Initial Release
