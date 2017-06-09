@@ -70,3 +70,14 @@
 [09-Jun-2017 01:11:43 America/Vancouver] PHP Fatal error:  require_once(): Failed opening required '/webserver/jamroom5/modules/xxZipCodes/index.php' (include_path='.:') in /webserver/jamroom5/modules/jrCore/router.php on line 224
 [09-Jun-2017 01:11:43 America/Vancouver] PHP Stack trace:
 [09-Jun-2017 01:11:43 America/Vancouver] PHP   1. {main}() /webserver/jamroom5/modules/jrCore/router.php:0
+[09-Jun-2017 12:48:02 America/Vancouver] PHP Warning:  implode(): Invalid arguments passed in /webserver/jamroom5/data/cache/kmParadigmDark/add5fe52c82fc40ebf52c4b808c998ba^6c3881bde4171712fc81c17254b2627544e5d8f1_1.file.4746dea1694bb75d6774e7e3e91d34a2^kmParadigmDark^index.tpl.php on line 46
+[09-Jun-2017 12:48:02 America/Vancouver] PHP Stack trace:
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   1. {main}() /webserver/jamroom5/modules/jrCore/router.php:0
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   2. jrCore_parse_template() /webserver/jamroom5/modules/jrCore/router.php:111
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   3. Smarty_Internal_TemplateBase->display() /webserver/jamroom5/modules/jrCore/lib/skin.php:621
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   4. Smarty_Internal_TemplateBase->_execute() /webserver/jamroom5/modules/jrCore/contrib/smarty/libs/sysplugins/smarty_internal_templatebase.php:114
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   5. Smarty_Internal_Template->render() /webserver/jamroom5/modules/jrCore/contrib/smarty/libs/sysplugins/smarty_internal_templatebase.php:199
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   6. Smarty_Template_Compiled->render() /webserver/jamroom5/modules/jrCore/contrib/smarty/libs/sysplugins/smarty_internal_template.php:184
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   7. Smarty_Template_Resource_Base->getRenderedTemplateCode() /webserver/jamroom5/modules/jrCore/contrib/smarty/libs/sysplugins/smarty_template_compiled.php:170
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   8. content_593afb720081d8_02976100() /webserver/jamroom5/modules/jrCore/contrib/smarty/libs/sysplugins/smarty_template_resource_base.php:128
+[09-Jun-2017 12:48:02 America/Vancouver] PHP   9. implode() /webserver/jamroom5/data/cache/kmParadigmDark/add5fe52c82fc40ebf52c4b808c998ba^6c3881bde4171712fc81c17254b2627544e5d8f1_1.file.4746dea1694bb75d6774e7e3e91d34a2^kmParadigmDark^index.tpl.php:46

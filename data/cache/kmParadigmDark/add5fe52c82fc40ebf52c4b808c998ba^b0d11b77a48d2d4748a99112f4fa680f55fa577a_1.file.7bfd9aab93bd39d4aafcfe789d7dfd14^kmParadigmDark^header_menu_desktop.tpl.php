@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-06-09 12:33:20
+/* Smarty version 3.1.30, created on 2017-06-09 12:48:05
   from "/webserver/jamroom5/data/cache/jrCore/7bfd9aab93bd39d4aafcfe789d7dfd14^kmParadigmDark^header_menu_desktop.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_593af800cb6676_51932438',
+  'unifunc' => 'content_593afb75a71405_97363676',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b0d11b77a48d2d4748a99112f4fa680f55fa577a' => 
     array (
       0 => '/webserver/jamroom5/data/cache/jrCore/7bfd9aab93bd39d4aafcfe789d7dfd14^kmParadigmDark^header_menu_desktop.tpl',
-      1 => 1497036800,
+      1 => 1497037683,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_593af800cb6676_51932438 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593afb75a71405_97363676 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('active_color', "#99CC00");
 ?>
 <div id="menu_content">
