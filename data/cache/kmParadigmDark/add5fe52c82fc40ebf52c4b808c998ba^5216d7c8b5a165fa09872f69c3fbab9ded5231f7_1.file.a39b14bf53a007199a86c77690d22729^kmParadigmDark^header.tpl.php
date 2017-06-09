@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-19 21:17:12
+/* Smarty version 3.1.30, created on 2017-06-09 12:33:20
   from "/webserver/jamroom5/data/cache/jrCore/a39b14bf53a007199a86c77690d22729^kmParadigmDark^header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591fc3482ec9c4_08068671',
+  'unifunc' => 'content_593af8004c8aa9_49807691',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5216d7c8b5a165fa09872f69c3fbab9ded5231f7' => 
     array (
       0 => '/webserver/jamroom5/data/cache/jrCore/a39b14bf53a007199a86c77690d22729^kmParadigmDark^header.tpl',
-      1 => 1495253831,
+      1 => 1497036800,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_591fc3482ec9c4_08068671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593af8004c8aa9_49807691 (Smarty_Internal_Template $_smarty_tpl) {
 if (function_exists('smarty_function_jrCore_include')) { echo smarty_function_jrCore_include(array('template'=>"meta.tpl"),$_smarty_tpl); } ?>
 
 <body<?php if (isset($_smarty_tpl->tpl_vars['spt']->value) && $_smarty_tpl->tpl_vars['spt']->value == 'home') {?> class="loading"<?php }?>>

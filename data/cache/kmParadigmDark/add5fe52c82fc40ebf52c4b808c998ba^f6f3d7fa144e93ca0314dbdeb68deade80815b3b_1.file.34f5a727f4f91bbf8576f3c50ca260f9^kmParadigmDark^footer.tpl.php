@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-19 21:17:18
+/* Smarty version 3.1.30, created on 2017-06-09 12:33:21
   from "/webserver/jamroom5/data/cache/jrCore/34f5a727f4f91bbf8576f3c50ca260f9^kmParadigmDark^footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591fc34e61a6c9_68083415',
+  'unifunc' => 'content_593af801098c47_38163609',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f6f3d7fa144e93ca0314dbdeb68deade80815b3b' => 
     array (
       0 => '/webserver/jamroom5/data/cache/jrCore/34f5a727f4f91bbf8576f3c50ca260f9^kmParadigmDark^footer.tpl',
-      1 => 1495253838,
+      1 => 1497036800,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_591fc34e61a6c9_68083415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593af801098c47_38163609 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once '/webserver/jamroom5/modules/jrCore/contrib/smarty/libs/plugins/modifier.date_format.php';
 if (isset($_smarty_tpl->tpl_vars['_post']->value['module']) && $_smarty_tpl->tpl_vars['_post']->value['option'] != 'admin' && ($_smarty_tpl->tpl_vars['_post']->value['module'] == 'jrRecommend' || $_smarty_tpl->tpl_vars['_post']->value['module'] == 'jrSearch')) {?>
                         </div>

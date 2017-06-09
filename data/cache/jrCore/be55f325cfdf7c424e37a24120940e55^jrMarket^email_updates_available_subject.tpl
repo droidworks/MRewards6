@@ -1,1 +1,0 @@
-Updates are available for {$_conf.jrCore_system_name}

@@ -1,5 +1,5 @@
 .sprite_icon_white_32{display:inline-block;width:32px;height:32px;}
-.sprite_icon_white_32_img{background:url('//jr5.paradigmusic.com/data/media/0/0/kmParadigmDark_sprite_white_32.png?_v=1492049866') no-repeat top left; height:100%;width:100%;}
+.sprite_icon_white_32_img{background:url('//jr5.paradigmusic.com/data/media/0/0/kmParadigmDark_sprite_white_32.png?_v=1497036801') no-repeat top left; height:100%;width:100%;}
 .sprite_icon_white_32_at{background-position:0 0}
 .sprite_icon_white_32_chat-close{background-position:-32px 0}
 .sprite_icon_white_32_chat-contact{background-position:-64px 0}
@@ -71,7 +71,7 @@
 screen and (-o-min-device-pixel-ratio: 3/2),
 screen and (min--moz-device-pixel-ratio: 2),
 screen and (min-device-pixel-ratio: 2) {
-  .sprite_icon_white_32_img{background:url('//jr5.paradigmusic.com/data/media/0/0/kmParadigmDark_sprite_white_64.png?_v=1492049866') no-repeat top left; height:100%;width:100%;}
+  .sprite_icon_white_32_img{background:url('//jr5.paradigmusic.com/data/media/0/0/kmParadigmDark_sprite_white_64.png?_v=1497036801') no-repeat top left; height:100%;width:100%;}
   .sprite_icon_white_32_at{background-position:0 0;background-size:2112px 32px}
   .sprite_icon_white_32_chat-close{background-position:-32px 0;background-size:2112px 32px}
   .sprite_icon_white_32_chat-contact{background-position:-64px 0;background-size:2112px 32px}

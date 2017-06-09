@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-18 19:12:13
+/* Smarty version 3.1.30, created on 2017-06-09 12:33:21
   from "/webserver/jamroom5/data/cache/jrCore/a472d0594856346ae3dcbe38e2c2adcf^jrSiteBuilder^page_editor_include.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591e547dab1a33_68466819',
+  'unifunc' => 'content_593af801544c57_66523257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3508850ea8436479a258c24b81c4b45e603229d8' => 
     array (
       0 => '/webserver/jamroom5/data/cache/jrCore/a472d0594856346ae3dcbe38e2c2adcf^jrSiteBuilder^page_editor_include.tpl',
-      1 => 1495159933,
+      1 => 1497036801,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_591e547dab1a33_68466819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593af801544c57_66523257 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['_conf']->value['jrSiteBuilder_enabled'] == 'on') {?>
 <div id="sb-include-section">
 

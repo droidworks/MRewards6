@@ -1,1 +1,0 @@
-A New User has just signed up on {$system_name}!

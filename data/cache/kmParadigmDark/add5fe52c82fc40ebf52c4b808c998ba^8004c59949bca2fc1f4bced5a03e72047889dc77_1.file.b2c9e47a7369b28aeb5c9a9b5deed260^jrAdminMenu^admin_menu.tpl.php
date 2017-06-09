@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-18 20:33:18
+/* Smarty version 3.1.30, created on 2017-06-09 12:33:21
   from "/webserver/jamroom5/data/cache/jrCore/b2c9e47a7369b28aeb5c9a9b5deed260^jrAdminMenu^admin_menu.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591e677e1f50c3_06243707',
+  'unifunc' => 'content_593af801709272_16129147',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8004c59949bca2fc1f4bced5a03e72047889dc77' => 
     array (
       0 => '/webserver/jamroom5/data/cache/jrCore/b2c9e47a7369b28aeb5c9a9b5deed260^jrAdminMenu^admin_menu.tpl',
-      1 => 1495164797,
+      1 => 1497036801,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_591e677e1f50c3_06243707 (Smarty_Internal_Template $_smarty_tpl) {
+function content_593af801709272_16129147 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php if (function_exists('smarty_function_jrCore_module_url')) { echo smarty_function_jrCore_module_url(array('module'=>"jrImage",'assign'=>"murl"),$_smarty_tpl); } ?>
