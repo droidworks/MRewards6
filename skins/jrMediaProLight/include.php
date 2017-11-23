@@ -2,7 +2,7 @@
 /**
  * Jamroom jrMediaProLight skin
  *
- * copyright 2016 The Jamroom Network
+ * copyright 2017 The Jamroom Network
  *
  * This Jamroom file is LICENSED SOFTWARE, and cannot be redistributed.
  *
@@ -50,7 +50,7 @@ function jrMediaProLight_skin_meta()
     $_tmp = array(
         'name'        => 'jrMediaProLight',
         'title'       => 'Media Pro Light',
-        'version'     => '1.5.3',
+        'version'     => '1.5.5',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'The Media Pro skin for Jamroom 5 (light version)',
         'license'     => 'jcl',

@@ -1,5 +1,14 @@
 Jamroom 4 Import Module changelog
 
+Version 1.1.7
+ - Bug Fix: Product module image import filename error
+
+Version 1.1.6
+ - Bug Fix: Product module import wasn't importing custom fields
+
+Version 1.1.5
+ - New: Option to import store items to the Product module
+
 Version 1.1.4
  - New: song_isrc, song_alicense and song_slicense fields now included in imports
 

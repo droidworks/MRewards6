@@ -46,7 +46,7 @@ function jrYouTube_meta()
     $_tmp = array(
         'name'        => 'YouTube',
         'url'         => 'youtube',
-        'version'     => '1.5.10',
+        'version'     => '1.5.15',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'Add YouTube video support to Profiles',
         'doc_url'     => 'https://www.jamroom.net/the-jamroom-network/documentation/modules/295/youtube',
@@ -67,9 +67,6 @@ function jrYouTube_init()
     // Event listeners
     jrCore_register_event_listener('jrCore', 'daily_maintenance', 'jrYouTube_daily_maintenance_listener');
     jrCore_register_event_listener('jrCore', 'verify_module', 'jrYouTube_verify_module_listener');
-
-    // our Sync Worker
-    jrCore_register_queue_worker('jrYouTube', 'youtube_sync', 'jrYouTube_youtube_sync_worker', 2, 1, 14400);
 
     // Allow admin to customize our forms
     jrCore_register_module_feature('jrCore', 'designer_form', 'jrYouTube', 'create');
@@ -98,11 +95,17 @@ function jrYouTube_init()
     jrCore_register_event_listener('jrCore', 'db_get_item', 'jrYouTube_db_get_item_listener');
     jrCore_register_event_listener('jrCore', 'db_search_items', 'jrYouTube_db_search_items_listener');
 
+    // System reset listener
+    jrCore_register_event_listener('jrDeveloper', 'reset_system', 'jrYouTube_reset_system_listener');
+
     // We have fields that can be searched
     jrCore_register_module_feature('jrSearch', 'search_fields', 'jrYouTube', 'youtube_title', 41);
 
     // Profile Stats
     jrCore_register_module_feature('jrProfile', 'profile_stats', 'jrYouTube', 'profile_jrYouTube_item_count', 41);
+
+    // We want RSS feeds
+    jrCore_register_module_feature('jrFeed', 'feed_support', 'jrYouTube', 'enabled');
 
     // We can be added to the Combined Video module
     $_tmp = array(
@@ -117,6 +120,9 @@ function jrYouTube_init()
         'requires' => 'jrEmbed',
     );
     jrCore_register_module_feature('jrSiteBuilder', 'widget', 'jrYouTube', 'widget_youtube', $_tmp);
+
+    // our Sync Worker
+    jrCore_register_queue_worker('jrYouTube', 'youtube_sync', 'jrYouTube_youtube_sync_worker', 2, 1, 14400);
 
     return true;
 }
@@ -159,6 +165,7 @@ function jrYouTube_widget_youtube_config_save($_post)
         $yid = jrCore_db_get_item_key('jrYouTube', $_post['youtube_id'], 'youtube_id');
         if (!$yid || strlen($yid) === 0) {
             // We have a problem...
+            return false;
         }
         $_cf['youtube_id'] = $yid;
     }
@@ -182,6 +189,22 @@ function jrYouTube_widget_youtube_display($_widget)
 //------------------------------------
 // EVENT LISTENERS
 //------------------------------------
+
+/**
+ * System Reset listener
+ * @param $_data array incoming data array
+ * @param $_user array current user info
+ * @param $_conf array Global config
+ * @param $_args array additional info about the module
+ * @param $event string Event Trigger name
+ * @return array
+ */
+function jrYouTube_reset_system_listener($_data, $_user, $_conf, $_args, $event)
+{
+    $tbl = jrCore_db_table_name('jrYouTube', 'api_info');
+    jrCore_db_query("TRUNCATE TABLE {$tbl}");
+    return $_data;
+}
 
 /**
  * Ensure YouTube artwork URLs are SSL if site is SSL enabled
@@ -826,9 +849,6 @@ function jrYouTube_sync_profile_id($profile_id)
             jrCore_logger('MAJ', 'error creating multiple youtube items during sync', $_ids);
         }
         else {
-            global $_user;
-            $_user    = jrCore_db_get_item('jrUser', $_rt['_user_id']);
-            $_SESSION = $_user;
             foreach ($_ids as $id) {
                 // Add to Actions...
                 jrCore_run_module_function('jrAction_save', 'create', 'jrYouTube', $id, null, false, $pid);

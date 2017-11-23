@@ -2,7 +2,7 @@
 /**
  * Jamroom Private Notes module
  *
- * copyright 2016 The Jamroom Network
+ * copyright 2017 The Jamroom Network
  *
  * This Jamroom file is LICENSED SOFTWARE, and cannot be redistributed.
  *

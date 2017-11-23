@@ -1,5 +1,16 @@
 Email Newsletters module change log
 
+Version 2.2.4:
+ - New: Profile replacement variables are now available in the newsletter subject and message
+ - Bug Fix: Newsletter data not being removed when Developer Tools "Reset System" tool is run
+
+Version 2.2.3:
+ - Bug Fix: Fixed bug introduced in version 2.2.2 when seleting quota filters
+
+Version 2.2.2:
+ - Bug Fix: Newsletters were not being sent when using Jamroom Core 6.1 beta
+ - Bug Fix: Some Filters not working properly when selecting multiple filters
+
 Version 2.2.1:
  - Bug Fix: Test Newsletter may not send on some systems
 

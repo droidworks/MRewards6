@@ -1,9 +1,8 @@
 <?php
 /**
- * Jamroom 5 User Play Control module
+ * Jamroom Play Control module
  *
- * copyright 2003 - 2015
- * by The Jamroom Network
+ * copyright 2017 The Jamroom Network
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0.  Please see the included "license.html" file.
@@ -49,11 +48,11 @@ function jrPlayControl_db_schema()
 {
     // Plays
     $_tmp = array(
-        "play_ip VARCHAR(15) NOT NULL DEFAULT ''",
+        "play_ip VARCHAR(45) NOT NULL DEFAULT ''",
         "play_key VARCHAR(8) NOT NULL DEFAULT ''",
         "play_count INT(11) UNSIGNED NOT NULL DEFAULT '0'",
         "PRIMARY KEY (`play_ip`,`play_key`)"
     );
-    jrCore_db_verify_table('jrPlayControl', 'play', $_tmp);
+    jrCore_db_verify_table('jrPlayControl', 'play', $_tmp, 'InnoDB');
     return true;
 }

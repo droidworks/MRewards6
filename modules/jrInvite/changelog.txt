@@ -1,5 +1,8 @@
 User Invite module changelog
 
+Version 1.0.2:
+ - Bug Fix: Invite actions were not clearing the profile cache
+
 Version 1.0.1:
  - Bug Fix: Invitations now cannot be updated if already sent to users
  - Bug Fix: No longer possible to clear module option in invitation updates

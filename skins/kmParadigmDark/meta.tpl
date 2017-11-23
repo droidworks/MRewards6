@@ -4,6 +4,7 @@
 <title>{if isset($page_title) && strlen($page_title) > 0}{$page_title}{else}{jrCore_lang skin=$_conf.jrCore_active_skin id="1" default="Home"}{/if} | {$_conf.jrCore_system_name}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 {if isset($meta)}
 {foreach from=$meta key="mname" item="mvalue"}
 <meta name="{$mname}" content="{$mvalue}" />
@@ -35,5 +36,12 @@ $(document).ready(function(){
 {$javascript_ready_function}return true;
  });
 </script>
+{/if}
+{if isset($selected) && ($selected == 'radio_player' || $selected == 'channel_player')}
+<style type="text/css">
+    #jrchat-tabs {
+        display: none !important;
+    }
+</style>
 {/if}
 </head>

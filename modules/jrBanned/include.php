@@ -2,7 +2,7 @@
 /**
  * Jamroom Banned Items module
  *
- * copyright 2016 The Jamroom Network
+ * copyright 2017 The Jamroom Network
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0.  Please see the included "license.html" file.
@@ -49,7 +49,7 @@ function jrBanned_meta()
     $_tmp = array(
         'name'        => 'Banned Items',
         'url'         => 'banned',
-        'version'     => '1.3.1',
+        'version'     => '1.3.3',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'Create, Update and Delete Banned names, words, email and IP addresses',
         'doc_url'     => 'https://www.jamroom.net/the-jamroom-network/documentation/modules/1950/banned-items',
@@ -82,12 +82,32 @@ function jrBanned_init()
     // Our default master view
     jrCore_register_module_feature('jrCore', 'default_admin_view', 'jrBanned', 'browse');
 
+    // System resets
+    jrCore_register_event_listener('jrDeveloper', 'reset_system', 'jrBanned_reset_system_listener');
+
     return true;
 }
 
 //---------------------
 // EVENT LISTENERS
 //---------------------
+
+/**
+ * Cleanup schema on system reset
+ * @param $_data array Array of information from trigger
+ * @param $_user array Current user
+ * @param $_conf array Global Config
+ * @param $_args array additional parameters passed in by trigger caller
+ * @param $event string Triggered Event name
+ * @return array
+ */
+function jrBanned_reset_system_listener($_data, $_user, $_conf, $_args, $event)
+{
+    $tbl = jrCore_db_table_name('jrBanned', 'banned');
+    jrCore_db_query("TRUNCATE TABLE {$tbl}");
+    jrCore_db_query("OPTIMIZE TABLE {$tbl}");
+    return $_data;
+}
 
 /**
  * Check for banned IPs
@@ -250,15 +270,18 @@ function jrBanned_get_banned_config($type)
     }
     $key = "jrbanned_is_banned_" . json_encode($type);
     if (!$_rt = jrCore_get_flag($key)) {
-        $tbl = jrCore_db_table_name('jrBanned', 'banned');
-        $req = "SELECT ban_type AS t, ban_value AS v FROM {$tbl} WHERE ban_type IN('" . implode("','", $type) . "')";
-        $_rt = jrCore_db_query($req, 'NUMERIC');
-        if (!$_rt || !is_array($_rt)) {
-            $_rt = 'no_items';
+        if (!$_rt = jrCore_is_cached('jrBanned', $key, false, false)) {
+            $tbl = jrCore_db_table_name('jrBanned', 'banned');
+            $req = "SELECT ban_type AS t, ban_value AS v FROM {$tbl} WHERE ban_type IN('" . implode("','", $type) . "')";
+            $_rt = jrCore_db_query($req, 'NUMERIC');
+            if (!$_rt || !is_array($_rt)) {
+                $_rt = 'no_items';
+            }
+            jrCore_set_flag($key, $_rt);
+            jrCore_add_to_cache('jrBanned', $key, $_rt, 0, 0, false, false);
         }
-        jrCore_set_flag($key, $_rt);
     }
-    if (!is_array($_rt) || count($_rt) === 0) {
+    if (!$_rt || !is_array($_rt) || count($_rt) === 0) {
         // No items of this type
         return false;
     }

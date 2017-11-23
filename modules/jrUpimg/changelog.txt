@@ -1,5 +1,12 @@
 Editor Image Upload module changelog
 
+Version 1.1.9:
+ - New: Image size selection added to the Site Builder widget
+ - New: Crop to aspect ratio added to the Site Builder widget
+
+Version 1.1.8:
+ - Bug Fix: The first time images are uploaded to the Site Builder system they do not show in the list
+
 Version 1.1.7:
  - Change: Updated error text for instances when an image may fail to upload
 

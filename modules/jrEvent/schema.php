@@ -57,7 +57,7 @@ function jrEvent_db_schema()
         "INDEX attendee_event_id (attendee_event_id)",
         "INDEX attendee_active (attendee_active)"
     );
-    jrCore_db_verify_table('jrEvent', 'attendee', $_tmp);
+    jrCore_db_verify_table('jrEvent', 'attendee', $_tmp, 'InnoDB');
 
     return true;
 }

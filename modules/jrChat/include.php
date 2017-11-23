@@ -46,7 +46,7 @@ function jrChat_meta()
     $_tmp = array(
         'name'        => 'Simple Chat',
         'url'         => 'chat',
-        'version'     => '1.1.1',
+        'version'     => '1.2.1',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'Simple Chat provides a site wide chat feature for logged in users',
         'doc_url'     => 'https://www.jamroom.net/the-jamroom-network/documentation/modules/2945/combined-audio',
@@ -85,12 +85,12 @@ function jrChat_init()
 
 /**
  * Bring in chat HTML for users that have it enabled
- * @param $_data array Array of information from trigger
+ * @param $_data string Array of information from trigger
  * @param $_user array Current user
  * @param $_conf array Global Config
  * @param $_args array additional parameters passed in by trigger caller
  * @param $event string Triggered Event name
- * @return array
+ * @return string
  */
 function jrChat_view_results_listener($_data, $_user, $_conf, $_args, $event)
 {
@@ -325,7 +325,7 @@ function jrChat_get_private_room_title($room_id, $user_id, $user_name = null)
     }
 
     // We've been given the OTHER user in chat
-    return jrCore_db_get_item_key('jrUser', $user_id, 'user_name') . ' & ' . $user_name;
+    return $user_name;
 }
 
 /**
@@ -578,6 +578,10 @@ function jrChat_get_messages($room_id, $before_id, $search_string = null)
         $_rt = array_reverse($_rt);
         $_ui = array();
         foreach ($_rt as $k => $_m) {
+            if (strpos($_m['c'], '~delmsg:') === 0) {
+                unset($_rt[$k]);
+                continue;
+            }
             $_ui[] = (int) $_m['u'];
         }
         if (count($_ui) > 0) {
@@ -708,29 +712,63 @@ function jrChat_get_rooms_for_user($user_id, $last_id)
     $uid = (int) $user_id;
     $tbl = jrCore_db_table_name('jrChat', 'room');
     $tbs = jrCore_db_table_name('jrChat', 'slot');
-    if (jrUser_is_admin()) {
-        $req = "SELECT * FROM {$tbl} ORDER BY room_public DESC, room_title ASC";
-    }
-    else {
-        $req = "SELECT r.* FROM {$tbs} s LEFT JOIN {$tbl} r ON r.room_id = s.slot_room_id WHERE (s.slot_user_id = '{$uid}' OR r.room_public = 1) ORDER BY r.room_public DESC, r.room_title ASC";
-    }
+    $req = "SELECT * FROM {$tbs} s LEFT JOIN {$tbl} r ON r.room_id = s.slot_room_id WHERE (s.slot_user_id = {$uid} OR r.room_public = 1) GROUP BY r.room_id ORDER BY r.room_public DESC, r.room_title ASC";
     $_rm = jrCore_db_query($req, 'room_id');
+    if (jrUser_is_admin()) {
+        // If we are an admin user, we can also view all other private chats on the system
+        $re2 = "SELECT * FROM {$tbs} s LEFT JOIN {$tbl} r ON r.room_id = s.slot_room_id WHERE (s.slot_user_id != {$uid} AND r.room_public != 1) GROUP BY r.room_id ORDER BY r.room_public DESC, r.room_title ASC";
+        $_r2 = jrCore_db_query($re2, 'room_id');
+        if ($_r2 && is_array($_r2)) {
+            $_rm = $_rm + $_r2;
+        }
+        unset($re2, $_r2);
+    }
     if ($_rm && is_array($_rm)) {
         $tbl = jrCore_db_table_name('jrChat', 'message');
-        $req = "SELECT msg_room_id, COUNT(msg_id) AS c FROM {$tbl} WHERE msg_id > {$last_id} GROUP BY msg_room_id";
-        $_rt = jrCore_db_query($req, 'msg_room_id', false, 'c');
-        if ($_rt && is_array($_rt)) {
-            foreach ($_rm as $rid => $_i) {
-                if (isset($_rt[$rid])) {
-                    $_rm[$rid]['room_new_count'] = (int) $_rt[$rid];
+        $req = "SELECT msg_room_id, COUNT(msg_id) AS c, MAX(msg_id) AS m FROM {$tbl} GROUP BY msg_room_id";
+        $_rt = jrCore_db_query($req, 'msg_room_id');
+        foreach ($_rm as $rid => $_i) {
+            if ($_rt && isset($_rt[$rid])) {
+                $_rm[$rid]['room_new_count'] = 0;
+                // If this is a PUBLIC room, always show new counts
+                if ($_i['room_public'] == 1) {
+                    if ($_i['slot_last_id'] < $_rt[$rid]['m']) {
+                        $_rm[$rid]['room_new_count'] = 1;
+                    }
                 }
                 else {
-                    $_rm[$rid]['room_new_count'] = 0;
+                    // If this is a PRIVATE room and we are involved, show counts
+                    if ($_i['slot_user_id'] == $user_id && $_i['slot_last_id'] < $_rt[$rid]['m']) {
+                        $_rm[$rid]['room_new_count'] = 1;
+                    }
                 }
+                $_rm[$rid]['room_msg_count'] = $_rt[$rid]['c'];
+            }
+            else {
+                $_rm[$rid]['room_new_count'] = 0;
+                $_rm[$rid]['room_msg_count'] = 0;
             }
         }
     }
     return $_rm;
+}
+
+/**
+ * Update the last message id for a user in a chat room
+ * @param int $user_id
+ * @param int $room_id
+ * @param int $last_id
+ * @return bool
+ */
+function jrChat_set_slot_last_id($user_id, $room_id, $last_id)
+{
+    $uid = (int) $user_id;
+    $rid = (int) $room_id;
+    $lid = (int) $last_id;
+    $tbl = jrCore_db_table_name('jrChat', 'slot');
+    $req = "UPDATE {$tbl} SET slot_last_id = {$lid} WHERE slot_user_id = {$uid} AND slot_room_id = {$rid}";
+    $cnt = jrCore_db_query($req, 'COUNT');
+    return ($cnt > 0) ? true : false;
 }
 
 /**
@@ -828,6 +866,18 @@ function jrChat_action_page($message)
     $_ln  = jrUser_load_lang_strings();
     $temp = $temp . "&#9734; <b>{$_user['user_name']}</b> {$_ln['jrChat'][34]} <b>{$name}</b> &#9734; " . trim(mb_substr($message, mb_strpos($message, ' ' . $name) + mb_strlen($name) + 1));
     return $temp;
+}
+
+/**
+ * Delete a message by ID via the client
+ * @param $message string message that contains action
+ * @return string
+ */
+function jrChat_action_delete($message)
+{
+    // :__delete 5
+    $id = trim(jrCore_string_field($message, 2));
+    return "~delmsg:{$id}~{";
 }
 
 /**

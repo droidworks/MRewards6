@@ -58,6 +58,27 @@ function jrSearch_db_schema()
         "UNIQUE s_unique (s_module, s_id, s_mod)",
         "FULLTEXT s_text (s_text)"
     );
-    jrCore_db_verify_table('jrSearch', 'fulltext', $_tmp, 'MyISAM');
+
+    // NOTE: MySQL 5.6+ and MariaDB can use InnoDB
+    $_db = jrCore_db_query("SHOW VARIABLES WHERE Variable_name = 'version'", 'SINGLE');
+    if ($_db && is_array($_db) && isset($_db['Value'])) {
+        $ver = $_db['Value'];
+    }
+    else {
+        $msi = jrCore_db_connect();
+        $ver = mysqli_get_server_info($msi);
+    }
+    if (strpos($ver, '-')) {
+        list($ver,) = explode('-', $ver);
+    }
+    $engine = 'MyISAM';
+    if (version_compare($ver, '5.6.4', '>=')) {
+        // We should be able to use InnoDB here - double check
+        $_ft = jrCore_db_query("SHOW VARIABLES LIKE '%nnodb_optimize_fulltext%'", 'SINGLE');
+        if ($_ft && is_array($_ft)) {
+            $engine = 'InnoDB';
+        }
+    }
+    jrCore_db_verify_table('jrSearch', 'fulltext', $_tmp, $engine);
     return true;
 }

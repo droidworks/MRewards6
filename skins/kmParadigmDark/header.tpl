@@ -1,3 +1,4 @@
+
 {jrCore_include template="meta.tpl"}
 
 <body{if isset($spt) && $spt == 'home'} class="loading"{/if}>
@@ -139,3 +140,4 @@
                         <div class="title">{jrCore_lang skin=$_conf.jrCore_active_skin id="124" default="Search Results"}</div>
                             <div class="body_5">
         {/if}
+

@@ -92,3 +92,4 @@ $lang[48] = 'no chat room selected';
 $lang[49] = 'open chat in separate window';
 $lang[50] = 'new message sound';
 $lang[51] = 'When a new message is received and chat is not focused do you want the new message sound to play?';
+$lang[52] = 'msg';

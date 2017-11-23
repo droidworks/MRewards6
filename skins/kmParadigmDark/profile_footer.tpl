@@ -61,6 +61,43 @@
             </div>
         {/if}
 
+        {*Alliance signup buttons with quota permissions KM*}
+        {*Quota 1 level up of user*}
+        {assign var="uqidp" value=$_user.profile_quota_id}
+        {capture assign=uqidp}{$uqidp + 1}{/capture}
+        {*Quota 1 level below user*}
+        {assign var="uqidm" value=$_user.profile_quota_id}
+        {capture assign=uqidm}{$uqidm - 1}{/capture}
+
+        {*Mentorship signup buttons with quota permissions*}
+        {*Quota 1 level up of user*}
+        {assign var="uqidp" value=$_user.profile_quota_id}
+        {capture assign=uqidp}{$uqidp + 1}{/capture}
+        {*Quota 2 levels above user*}
+        {assign var="uqidp2" value=$_user.profile_quota_id}
+        {capture assign=uqidp2}{$uqidp2 + 2}{/capture}
+
+        <div class="head_2"> {jrCore_lang skin=$_conf.jrCore_active_skin id="" default="Connection Signups"}:</div>
+        <div class="block mb20" style="border:1px solid #282828;">
+            <div class="block_content">
+                <div class="item center" style="padding: 0;">
+         {if jrCore_module_is_active('xxArtistAlliances')}
+          {*if ($_user._profile_id != $_profile_id)*}
+            {*if ($profile_quota_id == $_user.profile_quota_id || $profile_quota_id == $uqidm || $profile_quota_id == $uqidp)*}
+                    <a href="{$jamroom_url}/artistalliances/create?upid={$_user._profile_id}&pid={$_profile_id}&pnme={$profile_name}"><img src="" alt="Artist Alliance Signup" title="Artist Alliance Signup"></a>
+            {*/if*}
+         {/if}
+              <br><br>
+           {if jrCore_module_is_active('xxArtistMentorships')}
+            {*if ($profile_quota_id == $_user.profile_quota_id || $profile_quota_id == $uqidm || $profile_quota_id == $uqidp2)*}
+                    <a href="{$jamroom_url}/artistmentorships/create?upid={$_user._profile_id}&pid={$_profile_id}&pnme={$profile_name}"><img src="" alt="Artist Mentorship Signup" title="Artist Mentorship Signup"></a>
+            {*/if*}
+           {/if}
+         {*if*}
+                </div>
+            </div>
+        </div>
+
         {if jrCore_module_is_active('jrFollower')}
         {capture name="row_template" assign="follower_row"}
             {literal}

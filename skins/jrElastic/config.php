@@ -2,7 +2,7 @@
 /**
  * Jamroom jrElastic skin
  *
- * copyright 2016 The Jamroom Network
+ * copyright 2017 The Jamroom Network
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0.  Please see the included "license.html" file.
@@ -35,7 +35,7 @@
  * not permitted to limit liability and therefore such limitations
  * may not apply to you.
  *
- * @copyright 2012 Talldude Networks, LLC.
+ * @copyright 2017 The Jamroom Network - All Rights Reserved
  */
 
 // make sure we are not being called directly

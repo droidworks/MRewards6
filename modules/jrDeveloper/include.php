@@ -49,7 +49,7 @@ function jrDeveloper_meta()
     $_tmp = array(
         'name'        => 'Developer Tools',
         'url'         => 'developer',
-        'version'     => '1.4.4',
+        'version'     => '1.4.5',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'Developer tools for working with modules and skins',
         'doc_url'     => 'https://www.jamroom.net/the-jamroom-network/documentation/modules/932/developer-tools',

@@ -1,5 +1,14 @@
 ProJam Skin Changelog
 
+Version 1.5.5:
+ - Change: Fixed radio and channel popups so the player fits the height of the popup window. Templates modified: index_channel.tpl and index_radio.tpl
+ - Change: Moved CSS from the radio and channel popup page to in between the header tags. Templates modified: radio_player.tpl, channel_player.tpl and meta.tpl.
+
+Version 1.5.4:
+ - Bug Fix: Added missing jrCore_module_url function to index.tpl for the Welcome message.
+ - Bug Fix: Added if statement to check to see if the video and audio category and genre are set. Modified: video_categories_row.tpl, video_chart_categories_row.tpl, music_genres_row.tpl, music_chart_genres_row.tpl
+ - Change: The jrCore_list order_by in index_new_videos.tpl was changed to _item_id from _created.
+
 Version 1.5.3:
  - Change: Added check for tablet so mobile menu shows. Modified templates: header.tpl, header_menu_mobile.tpl and footer.tpl
  - Change: Fixed "Favorite Artist" and "Favorite Song" image from being to big on mobile. Modified templates: favorite_artist.tpl and favorite_song.tpl

@@ -2,13 +2,13 @@
 /**
  * Jamroom Jamroom 4 Import module
  *
- * copyright 2016 The Jamroom Network
+ * copyright 2017 Jamroom Network
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0.  Please see the included "license.html" file.
  *
  * This module may include works that are not developed by
- * The Jamroom Network
+ * Jamroom Network
  * and are used under license - any licenses are included and
  * can be found in the "contrib" directory within this module.
  *

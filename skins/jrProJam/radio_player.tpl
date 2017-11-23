@@ -1,10 +1,6 @@
+{assign var="selected" value="radio_player"}
 {jrCore_include template="meta.tpl"}
 <body>
-<style type="text/css">
-    .sb-button {ldelim}
-        display: none;
-    {rdelim}
-</style>
 
 <div class="container">
     <div class="row">

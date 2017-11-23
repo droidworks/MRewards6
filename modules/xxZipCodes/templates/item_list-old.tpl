@@ -1,8 +1,15 @@
 {jrCore_module_url module="xxZipCodes" assign="murl"}
-{if isset($_items)}
-    {foreach from=$_items item="item"}
+testing 123
+{*if isset($_items)*}
+    {*foreach from=$_items item="item"*}
         <div class="item">
-
+            <tr align="center" valign="middle">
+                <th bgcolor="#FFEA3A">Band Name</th>
+                <th bgcolor="#FFEA3A">Time Left in Contract</th>
+                <th bgcolor="#FFEA3A">You sharing your fanbase %</th>
+                <th bgcolor="#FFEA3A">Receiving commission from Artist?</th>
+                <th bgcolor="#FFEA3A">View the proposal</th>
+            </tr>
             <div class="block_config">
                 {jrCore_item_list_buttons module="xxZipCodes" item=$item}
             </div>
@@ -11,5 +18,5 @@
             <br>
         </div>
 
-    {/foreach}
-{/if}
+    {*/foreach*}
+{*/if*}

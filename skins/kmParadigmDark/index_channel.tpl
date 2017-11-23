@@ -17,7 +17,22 @@
             <div style="display:table-cell;text-align:center;vertical-align:middle;">
                 {jrCore_lang skin=$_conf.jrCore_active_skin id="69" default="Launch" assign="popup_title1"}
                 {assign var="chnnl_pop_title" value="`popup_title1` `$item.playlist_title`"}
-                <a onclick="popwin('{$jamroom_url}/channel_player/playlist_id={$item._item_id}/title={$item.playlist_title}/autoplay=true','channel_player',805,625,true);">{jrCore_image image="launch_button.png" alt=$chnnl_pop_title title=$chnnl_pop_title onmouseover="$(this).attr('src','`$jamroom_url`/skins/`$_conf.jrCore_active_skin`/img/launch_button_hover.png');" onmouseout="$(this).attr('src','`$jamroom_url`/skins/`$_conf.jrCore_active_skin`/img/launch_button.png');"}</a>
+                {assign var="skin_player_type" value="`$_conf.jrCore_active_skin`_player_type"}
+                {assign var="player_type" value=$_conf.$skin_player_type}
+                {assign var="player" value="jrAudio_`$player_type`"}
+
+                {if isset($player) && $player == 'jrAudio_player_dark'}
+                    {assign var="plyr_hght" value="676"}
+                {elseif isset($player) && $player == 'jrAudio_blue_monday'}
+                    {assign var="plyr_hght" value="675"}
+                {elseif isset($player) && $player == 'jrAudio_gray_overlay_player'}
+                    {assign var="plyr_hght" value="603"}
+                {elseif isset($player) && $player == 'jrAudio_black_overlay_player'}
+                    {assign var="plyr_hght" value="603"}
+                {else}
+                    {assign var="plyr_hght" value="713"}
+                {/if}
+                <a onclick="popwin('{$jamroom_url}/channel_player/playlist_id={$item._item_id}/title={$item.playlist_title}/autoplay=true','channel_player',805,{$plyr_hght},true);">{jrCore_image image="launch_button.png" alt=$chnnl_pop_title title=$chnnl_pop_title onmouseover="$(this).attr('src','`$jamroom_url`/skins/`$_conf.jrCore_active_skin`/img/launch_button_hover.png');" onmouseout="$(this).attr('src','`$jamroom_url`/skins/`$_conf.jrCore_active_skin`/img/launch_button.png');"}</a>
             </div>
         </div>
         <div class="float-right"><a href="{$jamroom_url}/channels"><div class="button-more">&nbsp;</div></a></div>

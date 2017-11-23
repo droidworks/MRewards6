@@ -46,7 +46,7 @@ function jrSoundCloud_meta()
     $_tmp = array(
         'name'        => 'SoundCloud',
         'url'         => 'soundcloud',
-        'version'     => '1.2.3',
+        'version'     => '1.2.6',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'Import SoundCloud tracks into a Profile',
         'doc_url'     => 'https://www.jamroom.net/the-jamroom-network/documentation/modules/290/soundcloud',
@@ -97,6 +97,9 @@ function jrSoundCloud_init()
 
     // We have fields that can be searched
     jrCore_register_module_feature('jrSearch', 'search_fields', 'jrSoundCloud', 'soundcloud_title', 60);
+
+    // We want RSS feeds
+    jrCore_register_module_feature('jrFeed', 'feed_support', 'jrSoundCloud', 'enabled');
 
     // Tool view
     jrCore_register_module_feature('jrCore', 'tool_view', 'jrSoundCloud', 'integrity_check', array('Integrity Check', 'Checks the integrity of all uploaded SoundCloud tracks'));

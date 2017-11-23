@@ -1,9 +1,8 @@
 <?php
 /**
- * Jamroom 5 Invitations module
+ * Jamroom Invitations module
  *
- * copyright 2003 - 2016
- * by The Jamroom Network
+ * copyright 2017 The Jamroom Network
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0.  Please see the included "license.html" file.
@@ -50,9 +49,10 @@ function jrInvite_meta()
     $_tmp = array(
         'name'        => 'Invitations',
         'url'         => 'invite',
-        'version'     => '1.0.1',
+        'version'     => '1.0.2',
         'developer'   => 'The Jamroom Network, &copy;' . strftime('%Y'),
         'description' => 'Users can invite people to their profile and module items',
+        'doc_url'     => 'https://www.jamroom.net/the-jamroom-network/documentation/modules/3598/invitations',
         'license'     => 'mpl',
         'category'    => 'users'
     );

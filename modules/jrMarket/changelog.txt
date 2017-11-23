@@ -1,6 +1,10 @@
 Marketplace module changelog
 
-Version 1.4.4:
+Version 1.5.0:
+ - Change: Strip bbcode from the module descriptions
+ - Bug Fix: verify_module() not always being run after updating a module from the Marketplace
+
+Version 1.4.5:
  - Change: CSS rules added for the Changelog background color so it can be changed in the Styles tab
 
 Version 1.4.4:

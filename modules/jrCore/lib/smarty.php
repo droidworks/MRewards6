@@ -348,7 +348,7 @@ function jrCore_item_action_buttons($type, $params, $smarty)
     }
 
     // Lastly - if this is a MASTER ADMIN viewing, let them config
-    if (jrUser_is_master()) {
+    if (jrUser_is_master() && jrProfile_is_profile_view()) {
         $url   = jrCore_get_module_url('jrCore');
         $ico   = jrCore_get_icon_html('settings');
         $_bt[] = '<a href="' . $_conf['jrCore_base_url'] . '/' . $url . '/item_action_buttons/' . $type . '/m=' . $params['module'] . '" title="configure these buttons and the order they appear in">' . $ico . '</a>';
@@ -426,6 +426,72 @@ function smarty_function_jrCore_item_detail_buttons($params, $smarty)
 }
 
 /**
+ * Add "bundle" buttons to a bundle index
+ * @param array $params parameters for function
+ * @param object $smarty Smarty object
+ * @return string
+ */
+function smarty_function_jrCore_bundle_index_buttons($params, $smarty)
+{
+    if (!isset($params['profile_id'])) {
+        return jrCore_smarty_missing_error('profile_id');
+    }
+    if (!jrCore_checktype($params['profile_id'], 'number_nz')) {
+        return jrCore_smarty_invalid_error('profile_id');
+    }
+    $out = jrCore_item_action_buttons('bundle_index', $params, $smarty);
+    if (!empty($params['assign'])) {
+        $smarty->assign($params['assign'], $out);
+        return '';
+    }
+    return $out;
+}
+
+/**
+ * Add "bundle" buttons to a bundle list
+ * @param array $params parameters for function
+ * @param object $smarty Smarty object
+ * @return string
+ */
+function smarty_function_jrCore_bundle_list_buttons($params, $smarty)
+{
+    if (!isset($params['profile_id'])) {
+        return jrCore_smarty_missing_error('profile_id');
+    }
+    if (!jrCore_checktype($params['profile_id'], 'number_nz')) {
+        return jrCore_smarty_invalid_error('profile_id');
+    }
+    $out = jrCore_item_action_buttons('bundle_list', $params, $smarty);
+    if (!empty($params['assign'])) {
+        $smarty->assign($params['assign'], $out);
+        return '';
+    }
+    return $out;
+}
+
+/**
+ * Add "bundle" buttons to a bundle detail template
+ * @param array $params parameters for function
+ * @param object $smarty Smarty object
+ * @return string
+ */
+function smarty_function_jrCore_bundle_detail_buttons($params, $smarty)
+{
+    if (!isset($params['profile_id'])) {
+        return jrCore_smarty_missing_error('profile_id');
+    }
+    if (!jrCore_checktype($params['profile_id'], 'number_nz')) {
+        return jrCore_smarty_invalid_error('profile_id');
+    }
+    $out = jrCore_item_action_buttons('bundle_detail', $params, $smarty);
+    if (!empty($params['assign'])) {
+        $smarty->assign($params['assign'], $out);
+        return '';
+    }
+    return $out;
+}
+
+/**
  * Add module feature sections to item details
  * @param array $params parameters for function
  * @param object $smarty Smarty object
@@ -467,7 +533,7 @@ function smarty_function_jrCore_item_detail_features($params, $smarty)
     // Get all registered features
     $_tmp = jrCore_get_registered_module_features('jrCore', 'item_detail_feature');
     $text = '';
-    if (isset($_tmp) && is_array($_tmp)) {
+    if (is_array($_tmp)) {
 
         // First get things in the right order
         $_res = array();
@@ -722,7 +788,7 @@ function smarty_function_jrCore_media_player($params, $smarty)
                 $_args['limit'] = (int) $v;
             }
         }
-        if (isset($_args) && is_array($_args) && count($_args) > 0) {
+        if (count($_args) > 0) {
             $_args['exclude_jrProfile_quota_keys'] = true;
             $_rt                                   = jrCore_db_search_items($params['module'], $_args);
             if (isset($_rt['_items']) && is_array($_rt['_items'])) {
@@ -744,10 +810,11 @@ function smarty_function_jrCore_media_player($params, $smarty)
     // Send out player playlist trigger
     $_rt = jrCore_trigger_event('jrCore', 'media_playlist', $_rt, $params);
 
-    // Our allowed formats
+    // Our allowed "base" formats
+    // NOTE: FLV and OGG are added in automatically based on config setting
     $_fm = array(
         'mp3' => 1,
-        'flv' => 1
+        'm4v' => 1
     );
 
     // Prepare our playlist setup
@@ -823,17 +890,23 @@ function smarty_function_jrCore_media_player($params, $smarty)
                     $ext => $str
                 )
             );
-            if ($ext == 'flv' && (jrCore_is_mobile_device() || jrCore_is_tablet_device())) {
-                if (!isset($fld) || strlen($fld) === 0) {
-                    // See if we can figure it out...
-                    $pfx = jrCore_db_get_prefix($_item['module']);
-                    $fld = "{$pfx}_file";
+            if ($ext == 'm4v') {
+
+                // This is a VIDEO - Add in Legacy FLV if enabled
+                if (isset($_conf['jrVideo_enable_flash']) && $_conf['jrVideo_enable_flash'] == 'on') {
+                    if (!isset($fld) || strlen($fld) === 0) {
+                        // See if we can figure it out...
+                        $pfx = jrCore_db_get_prefix($_item['module']);
+                        $fld = "{$pfx}_file";
+                    }
+                    $_rep['media'][$k]['formats']['flv'] = "{$_conf['jrCore_base_url']}/{$url}/stream/{$fld}/{$_item['_item_id']}/key=[jrCore_media_play_key]/file.flv";
+                    $_fmt['flv']                         = 'flv';
                 }
-                $_rep['media'][$k]['formats']['m4v'] = "{$_conf['jrCore_base_url']}/{$url}/stream/{$fld}_mobile/{$_item['_item_id']}/key=[jrCore_media_play_key]/file.m4v";
-                $_fmt['m4v']                         = 'm4v';
+
             }
-            if ($ext == 'mp3') {
-                // See if we have an OGG file as well...
+            elseif ($ext == 'mp3') {
+
+                // This is an AUDIO file - are we including OGG as well?
                 $mdir = jrCore_get_media_directory($_item['_profile_id']);
                 if (is_file("{$mdir}/jrAudio_{$_item['_item_id']}_audio_file.ogg")) {
                     if (!isset($fld) || strlen($fld) === 0) {
@@ -850,15 +923,10 @@ function smarty_function_jrCore_media_player($params, $smarty)
     }
 
     // Additional items
-    $_rep['uniqid']   = 'm' . jrCore_create_unique_string(13);
+    $_rep['uniqid']   = 'm' . jrCore_create_unique_string(6);
     $_rep['formats']  = implode(',', $_fmt);
     $_rep['params']   = $params;
     $_rep['solution'] = 'html,flash';
-
-    if (stristr($_SERVER['HTTP_USER_AGENT'], 'MSIE') || strpos($_SERVER['HTTP_USER_AGENT'], 'OPR/')) {
-        // TEMP: IE use flash
-        $_rep['solution'] = 'flash,html';
-    }
 
     // Let other modules manipulate our final params if needed 
     $_rep = jrCore_trigger_event('jrCore', 'media_player_params', $_rep, $params);
@@ -1174,7 +1242,7 @@ function smarty_function_jrCore_skin_menu($params, $smarty)
             elseif (isset($res) && is_numeric($res)) {
                 // Number - show next to title - i.e. this is a "notification"
                 $_rt[$k]['menu_function_result'] = $res;
-                $alert += $res;
+                $alert                           += $res;
             }
             elseif (isset($res) && strlen($res) > 0 && is_file(APP_DIR . "/modules/{$_opt['menu_module']}/img/{$res}")) {
                 // Image
@@ -1193,8 +1261,15 @@ function smarty_function_jrCore_skin_menu($params, $smarty)
         $_ci[$cat][$k] = $_rt[$k];
     }
     $params['menu_id'] = (isset($params['menu_id'])) ? $params['menu_id'] : 'skin_menu';
-    $params['label']   = (isset($params['label']) && isset($_lang["{$_conf['jrCore_active_skin']}"]["{$params['label']}"])) ? $_lang["{$_conf['jrCore_active_skin']}"]["{$params['label']}"] : $params['label'];
-    $_rp               = array(
+    if (isset($params['label'])) {
+        if (isset($_lang["{$_conf['jrCore_active_skin']}"]["{$params['label']}"])) {
+            $params['label'] = $_lang["{$_conf['jrCore_active_skin']}"]["{$params['label']}"];
+        }
+    }
+    else {
+        $params['label'] = '**no label**';
+    }
+    $_rp = array(
         '_items'             => $_rt,
         '_categories'        => $_ct,
         '_items_by_category' => $_ci,
@@ -1549,6 +1624,9 @@ function smarty_function_jrCore_list($params, $smarty)
         elseif ($k == 'return_keys') {
             $_args['return_keys'] = explode(',', $v);
         }
+        elseif ($k == 'fdebug' && $v == 1) {
+            $_args['fdebug'] = true;
+        }
         else {
             // Everything else
             $_args[$k] = $v;
@@ -1621,7 +1699,7 @@ function smarty_function_jrCore_list($params, $smarty)
                 $_rs['pager_load_id'] = $params['pager_load_id'];
             }
             $_rs['pager_show_jumper'] = (isset($_rs['info']['simplepagebreak'])) ? '0' : '1';
-            $tmp .= jrCore_parse_template($tpl, $_rs, $dir);
+            $tmp                      .= jrCore_parse_template($tpl, $_rs, $dir);
         }
     }
     jrCore_add_to_cache($module, $key, $tmp, false, $pid);
@@ -1684,6 +1762,11 @@ function smarty_function_jrCore_css_src($params, $smarty)
         }
         $src = "{$_conf['jrCore_base_url']}/data/cache/{$skn}/{$sum}.css";
     }
+    $_tm = jrCore_trigger_event('jrCore', 'master_css_src', array('src' => $src), $params);
+    if (isset($_tm['src']{5}) && $_tm['src'] != $src) {
+        // We were changed by a listener
+        $src = $_tm['src'];
+    }
     if (!empty($params['assign'])) {
         $smarty->assign($params['assign'], $src);
         return '';
@@ -1707,7 +1790,7 @@ function smarty_function_jrCore_javascript_src($params, $smarty)
     $sum = (isset($_conf["jrCore_{$skn}_javascript_version"])) ? $_conf["jrCore_{$skn}_javascript_version"] : false;
     $prt = jrCore_get_server_protocol();
     $cdr = jrCore_get_module_cache_dir($skn);
-    if (isset($prt) && $prt === 'https' || (jrUser_is_logged_in() && $_conf['jrUser_force_ssl'] == 'on')) {
+    if ($prt && $prt === 'https' || (jrUser_is_logged_in() && $_conf['jrUser_force_ssl'] == 'on')) {
         if (!$sum || !is_file("{$cdr}/S{$sum}.js") || (isset($_conf['jrCore_default_cache_seconds']) && $_conf['jrCore_default_cache_seconds'] == '0') || jrCore_is_developer_mode()) {
             $sum = jrCore_create_master_javascript($skn);
         }
@@ -1718,6 +1801,11 @@ function smarty_function_jrCore_javascript_src($params, $smarty)
             $sum = jrCore_create_master_javascript($skn);
         }
         $src = "{$_conf['jrCore_base_url']}/data/cache/{$skn}/{$sum}.js";
+    }
+    $_tm = jrCore_trigger_event('jrCore', 'master_javascript_src', array('src' => $src), $params);
+    if (isset($_tm['src']{5}) && $_tm['src'] != $src) {
+        // We were changed by a listener
+        $src = $_tm['src'];
     }
     if (!empty($params['assign'])) {
         $smarty->assign($params['assign'], $src);
@@ -1980,7 +2068,7 @@ function smarty_modifier_jrCore_convert_at_tags($text)
 }
 
 /**
- * Run internal text format functions (via triggers) on a string
+ * Run internal text format functions on a string
  * @param string $string String to format
  * @param int $quota_id Quota ID for Profile ID. Or 'allow_all_formatters' for everything.
  * @param string $whitelist Only allow defined string format listeners to run
@@ -1989,6 +2077,8 @@ function smarty_modifier_jrCore_convert_at_tags($text)
  */
 function smarty_modifier_jrCore_format_string($string, $quota_id = 0, $whitelist = null, $blacklist = null)
 {
+    jrCore_set_flag('jrcore_format_string_active', 1);
+
     // Check for white list
     $_wl = false;
     if (!is_null($whitelist) && isset($whitelist{2})) {
@@ -2118,6 +2208,12 @@ function smarty_modifier_jrCore_format_string($string, $quota_id = 0, $whitelist
         '</li><br />'   => '</li>',
         '<li><br>'      => '<li>',
         '<li><br />'    => '<li>',
+        '<ul><br>'      => '<ul>',
+        '<ul><br />'    => '<ul>',
+        '<ol><br>'      => '<ol>',
+        '<ol><br />'    => '<ol>',
+        '<br>\n<li>'    => '<li>',
+        '<br />\n<li>'  => '<li>',
         '<tr><br>'      => '<tr>',
         '<tr><br />'    => '<tr>',
         '</tr><br>'     => '</tr>',
@@ -2140,7 +2236,18 @@ function smarty_modifier_jrCore_format_string($string, $quota_id = 0, $whitelist
         // Cleanup output HTML
         $_data['string'] = jrCore_clean_html($_data['string']);
     }
+    jrCore_delete_flag('jrcore_format_string_active');
     return $_data['string'];
+}
+
+/**
+ * Strip all HTML from a string
+ * @param $string
+ * @return mixed
+ */
+function smarty_modifier_jrCore_strip_html($string)
+{
+    return jrCore_strip_html($string, null, true);
 }
 
 /**
@@ -2476,11 +2583,14 @@ function smarty_function_jrCore_item_create_button($params, $smarty)
                 $p_cnt = jrCore_db_get_item_key('jrProfile', $_user['user_active_profile_id'], "profile_{$params['module']}_item_count");
             }
             if ($p_cnt >= $q_max) {
-                $onc = "alert('" . jrCore_entity_string($_lang['jrCore'][70]) . "');return false;";
+                $onc = "jrCore_alert('" . jrCore_entity_string($_lang['jrCore'][70]) . "');return false;";
                 $anc = false;
             }
         }
 
+        if (isset($params['create_alt'])) {
+            $params['alt'] = $params['create_alt'];
+        }
         if (!isset($params['alt'])) {
             $params['alt'] = $_lang['jrCore'][36];
         }
@@ -2504,6 +2614,9 @@ function smarty_function_jrCore_item_create_button($params, $smarty)
         }
 
         // Check for "icon" param
+        if (isset($params['create_icon']{0})) {
+            $params['icon'] = $params['create_icon'];
+        }
         if (isset($params['icon']{0}) || !isset($params['image'])) {
 
             if (!isset($params['icon']) && !isset($params['image'])) {
@@ -2665,7 +2778,7 @@ function smarty_function_jrCore_item_update_button($params, $smarty)
     if (!jrCore_module_is_active($params['module'])) {
         return '';
     }
-    if (!isset($params['action'])) {
+    if (!isset($params['action']) && !isset($params['update_action'])) {
         if (!isset($params['item_id'])) {
             return jrCore_smarty_missing_error('item_id');
         }
@@ -2718,12 +2831,18 @@ function smarty_function_jrCore_item_update_button($params, $smarty)
         }
 
         // Check for "icon" param
+        if (isset($params['update_icon']{0})) {
+            $params['icon'] = $params['update_icon'];
+        }
         if (isset($params['icon']{0}) || !isset($params['image'])) {
 
             if (!isset($params['icon']) && !isset($params['image'])) {
                 $params['icon'] = 'gear';
             }
 
+            if (isset($params['update_alt'])) {
+                $params['alt'] = $params['update_alt'];
+            }
             if (isset($params['title'])) {
                 if (isset($_lang["{$params['module']}"]["{$params['title']}"])) {
                     $params['title'] = $_lang["{$params['module']}"]["{$params['title']}"];
@@ -2794,6 +2913,9 @@ function smarty_function_jrCore_item_update_button($params, $smarty)
                 $cls = ' class="' . $params['class'] . '"';
             }
             $alt = '';
+            if (isset($params['update_alt'])) {
+                $params['alt'] = $params['update_alt'];
+            }
             if (isset($params['alt'])) {
                 $alt = ' alt="' . jrCore_entity_string($params['alt']) . '"';
             }
@@ -2909,7 +3031,7 @@ function smarty_function_jrCore_item_delete_button($params, $smarty)
     if (!jrCore_module_is_active($params['module'])) {
         return '';
     }
-    if (!isset($params['action'])) {
+    if (!isset($params['action']) && !isset($params['delete_action'])) {
         if (!isset($params['item_id'])) {
             return jrCore_smarty_missing_error('item_id');
         }
@@ -2985,10 +3107,16 @@ function smarty_function_jrCore_item_delete_button($params, $smarty)
         }
 
         // Check for "icon" param
+        if (isset($params['delete_icon']{0})) {
+            $params['icon'] = $params['delete_icon'];
+        }
         if (isset($params['icon']{0}) || !isset($params['image'])) {
 
             if (!isset($params['icon']) && !isset($params['image'])) {
                 $params['icon'] = 'trash';
+            }
+            if (isset($params['delete_alt'])) {
+                $params['alt'] = $params['delete_alt'];
             }
             if (isset($params['title'])) {
                 if (isset($_lang["{$params['module']}"]["{$params['title']}"])) {
@@ -3017,7 +3145,13 @@ function smarty_function_jrCore_item_delete_button($params, $smarty)
             if (isset($params['color']) && strlen($params['color']) === 6 && jrCore_checktype($params['color'], 'hex')) {
                 $clr = $params['color'];
             }
-            $out = "<a href=\"{$url}\"" . $ttl . $onc . ">" . jrCore_get_sprite_html($params['icon'], $siz, $cls, $clr) . '</a>';
+
+            if ($ptx) {
+                $out = "<a onclick=\"jrCore_confirm('" . jrCore_entity_string($ptx) . "', '', function() { jrCore_window_location('{$url}') } )\"" . $ttl . ">" . jrCore_get_sprite_html($params['icon'], $siz, $cls, $clr) . '</a>';
+            }
+            else {
+                $out = "<a href=\"{$url}\"" . $ttl . $onc . ">" . jrCore_get_sprite_html($params['icon'], $siz, $cls, $clr) . '</a>';
+            }
         }
 
         // See if we are doing an IMAGE as the button - this will override
@@ -3060,6 +3194,9 @@ function smarty_function_jrCore_item_delete_button($params, $smarty)
                 $cls = ' class="' . $params['class'] . '"';
             }
             $alt = '';
+            if (isset($params['delete_alt'])) {
+                $params['alt'] = $params['delete_alt'];
+            }
             if (isset($params['alt'])) {
                 $alt = ' alt="' . jrCore_entity_string($params['alt']) . '"';
             }
@@ -3073,7 +3210,12 @@ function smarty_function_jrCore_item_delete_button($params, $smarty)
             elseif (isset($alt) && strlen($alt) > 0) {
                 $ttl = ' title=' . substr($alt, 5);
             }
-            $out = '<a href="' . $url . '"><img src="' . $params['image'] . '"' . $cls . $hgt . $wdt . $alt . $ttl . $onc . '></a>';
+            if ($ptx) {
+                $out = "<a onclick=\"jrCore_confirm('" . jrCore_entity_string($ptx) . "', '', function() { jrCore_window_location('{$url}') } )\">" . '<img src="' . $params['image'] . '"' . $cls . $hgt . $wdt . $alt . $ttl . $onc . '>' . '</a>';
+            }
+            else {
+                $out = '<a href="' . $url . '"><img src="' . $params['image'] . '"' . $cls . $hgt . $wdt . $alt . $ttl . $onc . '></a>';
+            }
         }
         else {
 
@@ -3109,7 +3251,12 @@ function smarty_function_jrCore_item_delete_button($params, $smarty)
                 elseif (isset($alt) && strlen($alt) > 0) {
                     $ttl = ' title="' . $alt . '"';
                 }
-                $out = '<a href="' . $url . '"><img src="' . $src . '"' . $cls . $onc . $ttl . ' alt="' . $alt . '"></a>';
+                if ($ptx) {
+                    $out = "<a onclick=\"jrCore_confirm('" . jrCore_entity_string($ptx) . "', '', function() { jrCore_window_location('{$url}') } )\">" . '<img src="' . $src . '"' . $cls . $onc . $ttl . ' alt="' . $alt . '">' . '</a>';
+                }
+                else {
+                    $out = '<a href="' . $url . '"><img src="' . $src . '"' . $cls . $onc . $ttl . ' alt="' . $alt . '"></a>';
+                }
             }
             else {
 
@@ -3449,6 +3596,7 @@ function smarty_function_jrCore_stats($params, $smarty)
         return '';
     }
     // Get all table counts in 1 shot
+    // TODO: This needs to be redone - it's not dependable
     $req = "SELECT TABLE_NAME, TABLE_ROWS FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '{$_conf['jrCore_db_name']}'";
     $_rt = jrCore_db_query($req, 'TABLE_NAME', false, 'TABLE_ROWS');
     if (!$_rt || !is_array($_rt)) {
@@ -3653,62 +3801,20 @@ function smarty_function_jrCore_editor_field($params, $smarty)
  */
 function smarty_function_jrCore_powered_by($params, $smarty)
 {
-    $_options = array(
-        'best cms ' . strftime('%Y'),
-        'best community script',
-        'best free cms',
-        'best open source cms',
-        'best social network script',
-        'best social networking script',
-        'best social networking scripts',
-        'cms free',
-        'cms open source',
-        'cms software',
-        'community cms',
-        'community script',
-        'community scripts',
-        'community software',
-        'content management software',
-        'content management system',
-        'download cms',
-        'enterprise content management system',
-        'free community cms',
-        'free community script',
-        'free social media platforms',
-        'free social network script',
-        'free social network scripts',
-        'free social networking script',
-        'free social networking scripts',
-        'free socialnetwork scripts',
-        'music community scripts',
-        'music social network',
-        'musical social network',
-        'musician social network',
-        'musicians social network',
-        'musicians social platform',
-        'open source content management system',
-        'open source social network',
-        'open source social network script',
-        'open source social networking script',
-        'open source web cms',
-        'php social network',
-        'php social networking script',
-        'social community platform',
-        'social media platform',
-        'social media platforms',
-        'social network cms',
-        'social network platform',
-        'social network platforms',
-        'social network script',
-        'social network scripts',
-        'social networking platform',
-        'social networking platforms',
-        'social networking script',
-        'social networking scripts',
-        'web based content management system',
+    $_op = array(
+        '11/jamroom-social-media-cms'               => 'social media CMS',
+        '12/jamroom-social-media-script'            => 'social media script',
+        '13/jamroom-the-social-network-cms'         => 'social network CMS',
+        '14/jamroom-the-social-networking-cms'      => 'social networking CMS',
+        '15/powerful-social-network-software'       => 'social network software',
+        '16/powerful-social-networking-software'    => 'social networking software',
+        '17/the-powerful-social-network-script'     => 'social network script',
+        '18/the-powerful-social-networking-script'  => 'social networking script',
+        '19/jamroom-social-media-software'          => 'social media software',
+        '20/jamroom-powerful-social-media-platform' => 'social media platform'
     );
-    $k        = array_rand($_options);
-    return '<span style="font-size:9px;"><a href="https://www.jamroom.net">' . $_options[$k] . '</a> | Powered by <a href="https://www.jamroom.net">Jamroom</a></span>';
+    $url = array_rand($_op);
+    return '<span style="font-size:9px;"><a href="https://www.jamroom.net/the-jamroom-network/about/' . $url . '">' . $_op[$url] . '</a> | Powered by <a href="https://www.jamroom.net">Jamroom</a></span>';
 }
 
 /**
@@ -3876,4 +3982,19 @@ function smarty_function_fdebug($params, $smarty)
 {
     fdebug($params); // OK
     return '';
+}
+
+/**
+ * returns the next tabindex for a page
+ * @return int|mixed
+ */
+function smarty_function_jrCore_next_tabindex($params, $smarty)
+{
+    $index = jrCore_get_flag('jr_form_tab_index');
+    if (!$index) {
+        $index = 0;
+    }
+    $index++;
+    jrCore_set_flag('jr_form_tab_index', $index);
+    return $index;
 }

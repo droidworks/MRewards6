@@ -131,7 +131,7 @@ function view_jrSmiley_create($_post, $_user, $_conf)
         if (isset($_post['_1']) && $_post['_1'] != 'default') {
             jrCore_page_note("No Smilies found in category");
         }
-        else {
+        elseif (!isset($_post['search_string'])) {
             $btn = jrCore_page_button('load_default', 'load default smiley set', "if(confirm('Load the default set of smiley images?  Please be patient - this could take up to a minute to run.')) { jrCore_window_location('{$_conf['jrCore_base_url']}/{$_post['module_url']}/load_default_set'); }");
             jrCore_page_note("No Smileys have been created - would you like to load the default set?<br><br>{$btn}");
         }

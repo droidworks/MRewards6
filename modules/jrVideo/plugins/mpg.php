@@ -39,7 +39,14 @@
 // make sure we are not being called directly
 defined('APP_DIR') or exit();
 
-function jrVideo_mpg_decode($input_file,$_options,$error_file)
+/**
+ * Decode an input file
+ * @param string $input_file
+ * @param array $_options
+ * @param string $error_file
+ * @return mixed
+ */
+function jrVideo_mpg_decode($input_file, $_options, $error_file)
 {
     return $input_file;
 }
